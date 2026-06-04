@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一言入瓷，千年不泯 — 长沙窑诗瓷共生</title>
+<!-- Load Google Fonts asynchronously so it doesn't block page render -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&family=Ma+Shan+Zheng&display=swap" rel="stylesheet"></noscript>
+<style>
+/* Font fallbacks in case Google Fonts is blocked */
+body { font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'SimHei', sans-serif; }
+.h-title, .h-sub, .nav-logo, .atitle, .acttl, .shd h2, .stitle { font-family: 'ZCOOL XiaoWei', 'KaiTi', 'STKaiti', serif; }
+.mpem, .mv, .ctop, .cunder, .rpem, .chip, .acsub, .winp { font-family: 'Ma Shan Zheng', 'KaiTi', 'STKaiti', cursive; }
+.h-desc, .pi-text, .pi-modern, .anote { font-family: 'Noto Serif SC', 'STSong', 'SimSun', serif; }
+</style>
+<style>
+:root{--ink:#0a0600;--clay:#c8a882;--clay-l:#e8d5b8;--fire:#e8622a;--amber:#f0a830;--gold:#c9a227;--celadon:#7aaa8e;--brown:#8b5e3c;--page:#060402;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--page);color:var(--clay-l);font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;overflow-x:hidden}
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.9rem 2rem;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(6,4,2,.96),transparent)}
+.nav-logo{font-family:'ZCOOL XiaoWei',serif;font-size:.92rem;color:var(--clay);letter-spacing:.15em}
+.nav-steps{display:flex;gap:1.6rem;list-style:none}
+.nav-steps li{font-size:.7rem;letter-spacing:.2em;color:#5c3d1e;cursor:pointer;transition:color .3s;position:relative;padding-bottom:3px}
+.nav-steps li::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--clay);transition:width .3s}
+.nav-steps li:hover,.nav-steps li.active{color:var(--clay)}
+.nav-steps li:hover::after,.nav-steps li.active::after{width:100%}
+.pbar{position:fixed;top:0;left:0;height:1px;background:linear-gradient(to right,var(--fire),var(--amber));transition:width .6s;z-index:1001}
+/* AUDIO TOGGLE */
+.aud-btn{position:fixed;bottom:1.5rem;right:1.5rem;width:42px;height:42px;border-radius:50%;background:rgba(200,168,130,.1);border:1px solid rgba(200,168,130,.28);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:900;transition:all .3s}
+.aud-btn:hover{background:rgba(200,168,130,.22)}
+.aud-btn svg{width:17px;height:17px;stroke:var(--clay);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* LOADING */
+.lov{position:fixed;inset:0;background:rgba(6,4,2,.9);z-index:700;display:none;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem}
+.lov.show{display:flex}
+.lbrush{width:2px;height:52px;background:linear-gradient(to bottom,transparent,var(--clay));animation:brushA 1s ease-in-out infinite alternate;transform-origin:top}
+.ltxt{font-family:'Noto Serif SC',serif;font-size:.88rem;color:var(--clay);letter-spacing:.3em;animation:pulse 1.5s infinite}
+/* HERO */
+#hero{position:relative;width:100%;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+#hbg{position:absolute;inset:0;width:100%;height:100%}
+.hero-content{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center}
+.h-era{font-size:.62rem;letter-spacing:.6em;color:var(--amber);opacity:.75;margin-bottom:2rem;animation:riseIn 1.4s .2s both}
+.h-title{font-family:'ZCOOL XiaoWei',serif;font-size:clamp(4rem,10vw,7.5rem);line-height:1;letter-spacing:.06em;color:var(--clay-l);text-shadow:0 0 80px rgba(232,98,42,.4),0 0 180px rgba(240,168,48,.18);margin-bottom:.5rem;animation:riseIn 1.6s .5s both}
+.h-title em{color:var(--fire);font-style:normal}
+.h-sub{font-family:'ZCOOL XiaoWei',serif;font-size:clamp(1.4rem,3vw,2.4rem);color:var(--clay);opacity:.8;letter-spacing:.1em;margin-bottom:2.5rem;animation:riseIn 1.4s .9s both}
+.h-line{width:70px;height:1px;background:linear-gradient(to right,transparent,var(--amber),transparent);margin:0 auto 1.8rem;animation:riseIn 1.2s 1.2s both}
+.h-desc{max-width:480px;font-family:'Noto Serif SC',serif;font-size:.85rem;line-height:2.1;color:var(--clay);opacity:.72;margin-bottom:2.8rem;animation:riseIn 1.2s 1.4s both}
+.btn-enter{display:inline-flex;align-items:center;gap:.7rem;font-size:.78rem;letter-spacing:.4em;color:var(--page);background:var(--clay);border:none;padding:.95rem 2.6rem;cursor:pointer;position:relative;overflow:hidden;animation:riseIn 1s 1.8s both;transition:box-shadow .3s}
+.btn-enter::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--fire),var(--amber));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.btn-enter:hover::before{transform:scaleX(1)}
+.btn-enter:hover{box-shadow:0 4px 40px rgba(232,98,42,.5)}
+.btn-enter span{position:relative;z-index:1}
+/* WHISPERS */
+.whisper{position:absolute;font-family:'Ma Shan Zheng',cursive;color:var(--clay);opacity:0;pointer-events:none;writing-mode:vertical-rl;letter-spacing:.18em;white-space:nowrap;z-index:3;animation:wfloat linear infinite}
+/* CRAFTSMAN */
+.craftsman-bubble{position:absolute;background:rgba(16,10,4,.92);border:1px solid rgba(200,168,130,.32);padding:.85rem 1.2rem;font-family:'Noto Serif SC','STSong',serif;font-size:.78rem;color:var(--clay-l);letter-spacing:.1em;line-height:1.85;width:220px;white-space:normal;word-break:break-all;animation:fadeIn .5s both;z-index:10;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,.5)}
+.craftsman-bubble::after{content:'';position:absolute;bottom:-7px;left:24px;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid rgba(200,168,130,.32)}
+/* STAGES */
+.stage{min-height:100vh;display:none;flex-direction:column;position:relative}
+.stage.active{display:flex}
+.shd{padding:6.2rem 3rem 2.2rem;display:flex;align-items:flex-start;gap:1.6rem;border-bottom:1px solid rgba(200,168,130,.11)}
+.snum{font-size:.62rem;letter-spacing:.4em;color:var(--fire);opacity:.7;writing-mode:vertical-rl;padding-top:.2rem;font-family:'Noto Serif SC',serif}
+.shd h2{font-family:'ZCOOL XiaoWei',serif;font-size:clamp(1.5rem,3.2vw,2.6rem);color:var(--clay-l);margin-bottom:.35rem}
+.shd p{font-size:.72rem;letter-spacing:.25em;color:var(--clay);opacity:.52}
+/* HISTORY STRIP */
+.history-strip{display:flex;gap:0;border-bottom:1px solid rgba(200,168,130,.1);overflow-x:auto;scrollbar-width:none}
+.history-strip::-webkit-scrollbar{display:none}
+.hist-item{flex:0 0 auto;width:220px;padding:1.8rem 1.5rem;border-right:1px solid rgba(200,168,130,.08);cursor:pointer;transition:background .3s;position:relative}
+.hist-item:hover,.hist-item.active{background:rgba(200,168,130,.04)}
+.hist-item canvas{display:block;margin-bottom:.8rem}
+.hist-era{font-size:.58rem;letter-spacing:.35em;color:var(--amber);opacity:.75;margin-bottom:.4rem}
+.hist-name{font-family:'ZCOOL XiaoWei',serif;font-size:.95rem;color:var(--clay-l);margin-bottom:.4rem}
+.hist-desc{font-size:.68rem;color:var(--clay);opacity:.55;line-height:1.75}
+/* STAGE1 */
+#stage1{background:radial-gradient(ellipse at 50% 0%,#1e1006 0%,var(--page) 65%)}
+.cbody{padding:2.2rem 3rem;flex:1;display:flex;flex-direction:column;gap:2.2rem}
+.crow{overflow-x:hidden;white-space:nowrap;padding:.7rem 0;mask:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+.chip{display:inline-block;font-family:'Ma Shan Zheng',cursive;font-size:.88rem;color:var(--clay-l);opacity:.42;padding:.45rem 1rem;border:1px solid rgba(200,168,130,.11);margin-right:.7rem;cursor:pointer;transition:all .32s;white-space:nowrap;vertical-align:top}
+.chip:hover,.chip.lit{opacity:1;border-color:rgba(200,168,130,.48);background:rgba(200,168,130,.05)}
+.chip.played{border-color:rgba(240,168,48,.38);opacity:.78}
+.izone{background:rgba(255,255,255,.014);border:1px solid rgba(200,168,130,.17);padding:2rem 2.5rem;position:relative}
+.izone::before{content:'采言壁';position:absolute;top:-.52rem;left:1.6rem;font-size:.62rem;letter-spacing:.3em;color:var(--clay);background:var(--page);padding:0 .45rem}
+.winp{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(200,168,130,.23);color:var(--clay-l);font-family:'Ma Shan Zheng',cursive;font-size:1.35rem;padding:.65rem 0;outline:none;letter-spacing:.05em;transition:border-color .3s}
+.winp::placeholder{color:var(--clay);opacity:.28;font-family:'Ma Shan Zheng',cursive}
+.winp:focus{border-bottom-color:var(--clay)}
+.chint{font-size:.65rem;color:var(--clay);opacity:.42;margin-top:.55rem;letter-spacing:.1em}
+.abtn{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.6rem;background:transparent;border:1px solid rgba(200,168,130,.32);color:var(--clay);font-size:.72rem;letter-spacing:.28em;padding:.7rem 1.5rem;cursor:pointer;transition:all .3s}
+.abtn:hover{background:rgba(200,168,130,.07);border-color:var(--clay)}
+.abtn:disabled{opacity:.32;cursor:not-allowed}
+.sdot{width:5px;height:5px;border-radius:50%;background:var(--fire);animation:pulse 2s infinite;flex-shrink:0}
+.erblock{display:none;padding:1.6rem 1.8rem;border-left:2px solid var(--celadon);background:rgba(122,170,142,.04);margin-top:1.6rem;animation:fadeIn .8s both}
+.erblock.show{display:block}
+.elbl{font-size:.62rem;letter-spacing:.35em;color:var(--celadon);margin-bottom:.7rem}
+.mpem{font-family:'Ma Shan Zheng',cursive;font-size:1.3rem;color:var(--clay-l);line-height:1.9;margin-bottom:.7rem}
+.msrc{font-size:.68rem;color:var(--clay);opacity:.52;letter-spacing:.18em}
+.ebadge{display:inline-block;font-size:.62rem;letter-spacing:.22em;padding:.22rem .7rem;border-radius:20px;margin-bottom:.7rem}
+.b-miss{background:rgba(122,170,142,.18);color:var(--celadon)}
+.b-hope{background:rgba(240,168,48,.15);color:var(--amber)}
+.b-regret{background:rgba(200,168,130,.15);color:var(--clay)}
+.b-joy{background:rgba(232,98,42,.15);color:var(--fire)}
+.nbtn{display:none;align-items:center;gap:.55rem;margin-top:1.6rem;background:transparent;border:1px solid rgba(200,168,130,.32);color:var(--clay-l);font-size:.72rem;letter-spacing:.28em;padding:.7rem 1.5rem;cursor:pointer;transition:all .3s}
+.nbtn.show{display:inline-flex}
+.nbtn:hover{background:rgba(200,168,130,.07);border-color:var(--clay)}
+.emsg{font-size:.7rem;color:#e87070;margin-top:.55rem;display:none}
+.emsg.show{display:block}
+/* RECITE OVERLAY */
+.rov{position:fixed;inset:0;z-index:800;display:none;align-items:center;justify-content:center;background:rgba(6,4,2,.9)}
+.rov.show{display:flex}
+.rcard{text-align:center;max-width:400px;padding:2.8rem 2.2rem;border:1px solid rgba(200,168,130,.2);animation:riseIn .55s both;background:rgba(10,6,2,.6)}
+.rpem{font-family:'Ma Shan Zheng',cursive;font-size:1.5rem;color:var(--clay-l);line-height:2;writing-mode:vertical-rl;margin:0 auto 1.3rem}
+.rsrc{font-size:.68rem;letter-spacing:.28em;color:var(--clay);opacity:.58}
+.rwaves{display:flex;gap:5px;justify-content:center;margin-top:1.3rem;align-items:flex-end}
+.rwaves span{width:3px;background:var(--amber);border-radius:2px;animation:wave .8s ease-in-out infinite}
+.rwaves span:nth-child(2){animation-delay:.15s}
+.rwaves span:nth-child(3){animation-delay:.3s}
+.rwaves span:nth-child(4){animation-delay:.45s}
+.rwaves span:nth-child(5){animation-delay:.6s}
+.rcls{margin-top:1.8rem;background:transparent;border:1px solid rgba(200,168,130,.28);color:var(--clay);font-size:.7rem;letter-spacing:.28em;padding:.55rem 1.3rem;cursor:pointer;transition:all .3s}
+.rcls:hover{background:rgba(200,168,130,.09)}
+/* STAGE 2 */
+#stage2{background:radial-gradient(ellipse at 25% 50%,#1e1206 0%,var(--page) 60%)}
+.fwrap{padding:2.2rem 3rem;flex:1;display:grid;grid-template-columns:340px 1fr;gap:2.8rem;align-items:start}
+.vcol{display:flex;flex-direction:column;align-items:center;gap:1.6rem}
+#vc{border:1px solid rgba(200,168,130,.1);background:rgba(0,0,0,.4);display:block}
+.vctrl{width:100%;display:flex;flex-direction:column;gap:.85rem}
+.ctabs{display:flex;gap:0;border:1px solid rgba(200,168,130,.18);overflow:hidden;margin-bottom:.4rem}
+.ctab{flex:1;font-size:.62rem;letter-spacing:.18em;padding:.45rem .1rem;text-align:center;cursor:pointer;color:var(--clay);opacity:.48;transition:all .28s;border:none;background:transparent}
+.ctab.active{opacity:1;background:rgba(200,168,130,.09);color:var(--clay-l)}
+.cpanel{display:none}
+.cpanel.active{display:flex;flex-direction:column;gap:.8rem}
+.crow2{display:flex;align-items:center;gap:.75rem}
+.clbl{font-size:.62rem;letter-spacing:.18em;color:var(--clay);opacity:.62;width:2.8rem;flex-shrink:0}
+.csl{flex:1;-webkit-appearance:none;appearance:none;height:1px;background:rgba(200,168,130,.18);outline:none;cursor:pointer}
+.csl::-webkit-slider-thumb{-webkit-appearance:none;width:10px;height:10px;border-radius:50%;background:var(--clay);cursor:pointer;transition:transform .18s}
+.csl::-webkit-slider-thumb:hover{transform:scale(1.3)}
+.cvl{font-size:.62rem;color:var(--clay);opacity:.52;width:1.8rem;text-align:right}
+.swrow{display:flex;gap:.45rem;flex-wrap:wrap}
+.sw{width:26px;height:26px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:all .18s}
+.sw.active{border-color:var(--clay-l);transform:scale(1.18)}
+.shrow,.ptrow{display:flex;gap:.4rem;flex-wrap:wrap}
+.shbtn,.ptbtn{flex:1;font-size:.6rem;letter-spacing:.12em;padding:.4rem .2rem;text-align:center;cursor:pointer;border:1px solid rgba(200,168,130,.18);color:var(--clay);opacity:.52;transition:all .22s;background:transparent;min-width:46px}
+.shbtn.active,.ptbtn.active{opacity:1;border-color:var(--clay);background:rgba(200,168,130,.07)}
+.ccol{display:flex;flex-direction:column;gap:1.6rem}
+.stitle{font-family:'Noto Serif SC',serif;font-size:.82rem;color:var(--clay-l);letter-spacing:.18em;padding-bottom:.65rem;border-bottom:1px solid rgba(200,168,130,.11)}
+.cprev{min-height:240px;background:rgba(0,0,0,.3);border:1px solid rgba(200,168,130,.1);display:flex;align-items:center;justify-content:center;padding:1.4rem;position:relative;overflow:hidden}
+.cunder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Ma Shan Zheng',cursive;font-size:1rem;color:var(--celadon);opacity:.16;writing-mode:vertical-rl;letter-spacing:.14em;padding:1.1rem;text-align:center;line-height:2}
+.ctop{position:relative;font-family:'Ma Shan Zheng',cursive;font-size:1.45rem;color:#6b3010;text-align:center;line-height:1.9;writing-mode:vertical-rl;text-shadow:1px 1px 0 rgba(200,168,130,.22)}
+.gbtn{display:inline-flex;align-items:center;gap:.55rem;background:rgba(100,50,20,.18);border:1px solid rgba(139,94,60,.42);color:var(--clay-l);font-size:.72rem;letter-spacing:.28em;padding:.7rem 1.5rem;cursor:pointer;transition:all .28s;align-self:flex-start}
+.gbtn:hover{background:rgba(139,94,60,.28);border-color:var(--clay)}
+.gbtn:disabled{opacity:.32;cursor:not-allowed}
+.anote{font-size:.76rem;color:var(--clay);opacity:.58;line-height:1.9;font-style:italic;display:none;font-family:'Noto Serif SC',serif}
+.anote.show{display:block;animation:fadeIn .6s both}
+/* STAGE 3 */
+#stage3{background:radial-gradient(ellipse at 50% 110%,#2e0e03 0%,var(--page) 55%)}
+.kwrap{padding:2.2rem 3rem;flex:1;display:flex;flex-direction:column;align-items:center;gap:2.2rem}
+.ktheat{width:100%;max-width:780px;display:flex;flex-direction:column;align-items:center;gap:1.3rem}
+#kc{border:1px solid rgba(200,168,130,.06)}
+.kstat{font-family:'Noto Serif SC',serif;font-size:.88rem;color:var(--clay);letter-spacing:.24em;text-align:center;min-height:1.4rem;transition:all .4s}
+.kbtns{display:flex;gap:1.1rem;flex-wrap:wrap;justify-content:center}
+.fbtn{font-size:.78rem;letter-spacing:.32em;color:var(--page);background:linear-gradient(135deg,var(--fire),var(--amber));border:none;padding:.9rem 2.6rem;cursor:pointer;transition:all .28s}
+.fbtn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,98,42,.42)}
+.fbtn:disabled{opacity:.38;cursor:not-allowed;transform:none;box-shadow:none}
+.sbtn{font-size:.75rem;letter-spacing:.26em;color:var(--clay-l);background:transparent;border:1px solid rgba(200,168,130,.32);padding:.9rem 1.7rem;cursor:pointer;transition:all .28s;display:none}
+.sbtn.show{display:block}
+.sbtn:hover{background:rgba(200,168,130,.08);border-color:var(--clay)}
+/* ARTIFACT */
+.acard{width:100%;max-width:680px;border:1px solid rgba(200,168,130,.18);background:rgba(14,8,3,.88);padding:2.8rem;display:none;animation:fadeIn .9s both}
+.acard.show{display:block}
+.atitle{font-family:'ZCOOL XiaoWei',serif;font-size:1.12rem;color:var(--clay-l);letter-spacing:.15em;margin-bottom:2rem;text-align:center}
+.ainner{display:grid;grid-template-columns:200px 1fr;gap:2rem;margin-bottom:2rem}
+.aves canvas{border:1px solid rgba(200,168,130,.12)}
+.ameta{display:flex;flex-direction:column;gap:1.1rem}
+.mi{border:1px solid rgba(200,168,130,.1);padding:.85rem}
+.ml{font-size:.58rem;letter-spacing:.28em;color:var(--clay);opacity:.52;margin-bottom:.3rem;display:block}
+.mv{font-family:'Ma Shan Zheng',cursive;font-size:.9rem;color:var(--clay-l);line-height:1.6}
+.poem-insight{border:1px solid rgba(122,170,142,.2);background:rgba(122,170,142,.04);padding:1.2rem 1.5rem;margin-bottom:1.5rem}
+.pi-title{font-size:.58rem;letter-spacing:.28em;color:var(--celadon);margin-bottom:.6rem;display:block}
+.pi-text{font-family:'Noto Serif SC',serif;font-size:.8rem;color:var(--clay-l);line-height:1.9;opacity:.85}
+.pi-modern{margin-top:.8rem;padding-top:.8rem;border-top:1px solid rgba(122,170,142,.15);font-size:.75rem;color:var(--clay);opacity:.7;line-height:1.8;font-style:italic}
+.acert{text-align:center;padding-top:1.3rem;border-top:1px solid rgba(200,168,130,.1)}
+.acttl{font-family:'ZCOOL XiaoWei',serif;font-size:.82rem;color:var(--gold);letter-spacing:.3em;margin-bottom:.38rem}
+.acsub{font-family:'Ma Shan Zheng',cursive;font-size:.72rem;color:var(--clay);opacity:.55;margin:.38rem 0}
+.acid{font-size:.58rem;color:var(--clay);opacity:.38;letter-spacing:.18em;font-family:monospace}
+/* KEYFRAMES */
+@keyframes riseIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.52}50%{opacity:1}}
+@keyframes brushA{from{transform:scaleY(.28);opacity:.38}to{transform:scaleY(1);opacity:1}}
+@keyframes wave{0%,100%{height:5px}50%{height:20px}}
+@keyframes wfloat{0%{opacity:0;transform:translateY(50px)}10%{opacity:.2}80%{opacity:.1}100%{opacity:0;transform:translateY(-28vh)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@media(max-width:768px){.fwrap{grid-template-columns:1fr}.nav-steps{display:none}.shd{padding:4.8rem 1.4rem 1.8rem}.cbody,.kwrap{padding:1.4rem}.ainner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pbar" id="pbar" style="width:0%"></div>
+<nav id="nav">
+  <div class="nav-logo">长沙窑 · 诗瓷共生</div>
+  <ul class="nav-steps">
+    <li class="active" id="n0" onclick="goS(0)">序·入境</li>
+    <li id="n1" onclick="goS(1)">一阶·采言</li>
+    <li id="n2" onclick="goS(2)">二阶·入瓷</li>
+    <li id="n3" onclick="goS(3)">三阶·永存</li>
+  </ul>
+</nav>
+<div class="aud-btn" id="abtn" onclick="toggleMute()" title="音效开关">
+  <svg id="aico" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+</div>
+<div class="lov" id="lov">
+  <div class="lbrush"></div>
+  <div class="ltxt" id="ltxt">AI 正在感知……</div>
+</div>
+<div class="rov" id="rov">
+  <div class="rcard">
+    <div id="rpem" class="rpem"></div>
+    <div id="rsrc" class="rsrc"></div>
+    <div class="rwaves"><span style="height:7px"></span><span style="height:13px"></span><span style="height:19px"></span><span style="height:13px"></span><span style="height:7px"></span></div>
+    <button class="rcls" onclick="closeRecite()">关闭 ×</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="hbg"></canvas>
+  <div id="wlayer" style="position:absolute;inset:0;pointer-events:none;z-index:3"></div>
+  <div id="craftlayer" style="position:absolute;inset:0;pointer-events:none;z-index:4"></div>
+  <div class="hero-content">
+    <div class="h-era">唐代 · 长沙窑 · 黑石号 · 公元九世纪</div>
+    <h1 class="h-title">一言入<em>瓷</em></h1>
+    <h2 class="h-sub">千年不泯</h2>
+    <div class="h-line"></div>
+    <p class="h-desc">一千两百年前，一位无名窑工<br>将心里的话写在胚胎之上，烧进釉里<br>随船沉入海底，千年后被我们捧在手心。<br>今天，你的话，也可以这样永恒。</p>
+    <button class="btn-enter" onclick="goS(1)"><span>开始体验</span><span>→</span></button>
+  </div>
+</section>
+
+<!-- STAGE 1 -->
+<section class="stage" id="stage1">
+  <div class="shd"><div class="snum">第一阶</div><div><h2>采言 · 听见千年前的心跳</h2><p>GATHERING · VOICES ACROSS A MILLENNIUM</p></div></div>
+  <!-- HISTORY STRIP -->
+  <div class="history-strip" id="hstrip"></div>
+  <div class="cbody">
+    <p style="font-size:.68rem;color:var(--clay);opacity:.46;letter-spacing:.24em">—— 点击诗句，聆听古人吟诵</p>
+    <div class="crow" id="row1"></div>
+    <div class="crow" id="row2"></div>
+    <div class="izone">
+      <label style="font-family:'Noto Serif SC',serif;font-size:.95rem;color:var(--clay-l);opacity:.8;margin-bottom:1.2rem;display:block;letter-spacing:.06em">此刻，你最想说的一句话是什么？</label>
+      <input class="winp" id="winp" type="text" maxlength="50" placeholder="写下你的心声……" oninput="onWI()">
+      <div class="chint">字数：<span id="wc">0</span> / 50</div>
+      <div class="emsg" id="e1">请先输入你的心声</div>
+      <button class="abtn" id="abtn2" onclick="analyze()" disabled><div class="sdot"></div>感知情绪 · 匹配古诗</button>
+    </div>
+    <div class="erblock" id="er">
+      <div class="elbl">AI 情绪感知</div>
+      <div id="ebdg"></div>
+      <div class="mpem" id="mpem"></div>
+      <div class="msrc" id="msrc"></div>
+      <button class="nbtn show" onclick="goS(2)">进入第二阶 · 入瓷 →</button>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 2 -->
+<section class="stage" id="stage2">
+  <div class="shd"><div class="snum">第二阶</div><div><h2>入瓷 · AI 共写一首诗</h2><p>INSCRIBING · CO-CREATING WITH THE ANCIENTS</p></div></div>
+  <div class="fwrap">
+    <div class="vcol">
+      <p class="stitle" style="align-self:flex-start;width:100%">虚拟拉坯 · 塑造你的器型</p>
+      <canvas id="vc" width="320" height="400"></canvas>
+      <div class="vctrl">
+        <div class="ctabs">
+          <button class="ctab active" onclick="stab('shape')">器型</button>
+          <button class="ctab" onclick="stab('size')">尺寸</button>
+          <button class="ctab" onclick="stab('glaze')">釉色</button>
+          <button class="ctab" onclick="stab('pattern')">花纹</button>
+        </div>
+        <div class="cpanel active" id="tp-shape">
+          <div class="shrow">
+            <button class="shbtn active" onclick="setShape('ewer')" id="sh-ewer">执壶</button>
+            <button class="shbtn" onclick="setShape('bowl')" id="sh-bowl">碗盏</button>
+            <button class="shbtn" onclick="setShape('jar')" id="sh-jar">罐坛</button>
+            <button class="shbtn" onclick="setShape('vase')" id="sh-vase">花瓶</button>
+            <button class="shbtn" onclick="setShape('cup')" id="sh-cup">酒杯</button>
+          </div>
+        </div>
+        <div class="cpanel" id="tp-size">
+          <div class="crow2"><span class="clbl">高度</span><input class="csl" type="range" id="vh" min="35" max="90" value="62" oninput="uv()"><span class="cvl" id="vh-v">62</span></div>
+          <div class="crow2"><span class="clbl">腰围</span><input class="csl" type="range" id="vb" min="25" max="80" value="50" oninput="uv()"><span class="cvl" id="vb-v">50</span></div>
+          <div class="crow2"><span class="clbl">口径</span><input class="csl" type="range" id="vm" min="12" max="65" value="30" oninput="uv()"><span class="cvl" id="vm-v">30</span></div>
+          <div class="crow2"><span class="clbl">底足</span><input class="csl" type="range" id="vf" min="12" max="42" value="22" oninput="uv()"><span class="cvl" id="vf-v">22</span></div>
+        </div>
+        <div class="cpanel" id="tp-glaze">
+          <div class="clbl" style="width:auto;margin-bottom:.4rem">釉色</div>
+          <div class="swrow">
+            <div class="sw active" style="background:#7aaa8e" title="青釉" onclick="setGlaze('celadon','#7aaa8e','#3d6b52','青釉')" id="sw-celadon"></div>
+            <div class="sw" style="background:#8b5e3c" title="褐釉" onclick="setGlaze('brown','#8b5e3c','#5c3518','褐釉')" id="sw-brown"></div>
+            <div class="sw" style="background:#e8d5b8" title="白釉" onclick="setGlaze('white','#e8d5b8','#c8a882','白釉')" id="sw-white"></div>
+            <div class="sw" style="background:#c9a227" title="黄釉" onclick="setGlaze('amber','#c9a227','#8a6c10','黄釉')" id="sw-amber"></div>
+            <div class="sw" style="background:#2d5a7a" title="蓝釉" onclick="setGlaze('blue','#2d5a7a','#1a3a52','蓝釉')" id="sw-blue"></div>
+            <div class="sw" style="background:#8a2b2b" title="红釉" onclick="setGlaze('red','#8a2b2b','#5c1818','红釉')" id="sw-red"></div>
+          </div>
+          <div class="crow2" style="margin-top:.7rem"><span class="clbl">光泽</span><input class="csl" type="range" id="vgl" min="0" max="100" value="60" oninput="uv()"><span class="cvl" id="vgl-v">60</span></div>
+        </div>
+        <div class="cpanel" id="tp-pattern">
+          <div class="clbl" style="width:auto;margin-bottom:.4rem">纹样</div>
+          <div class="ptrow">
+            <button class="ptbtn active" onclick="setPat('poem')" id="pt-poem">诗文</button>
+            <button class="ptbtn" onclick="setPat('cloud')" id="pt-cloud">云纹</button>
+            <button class="ptbtn" onclick="setPat('fish')" id="pt-fish">鱼纹</button>
+            <button class="ptbtn" onclick="setPat('lotus')" id="pt-lotus">莲纹</button>
+            <button class="ptbtn" onclick="setPat('geo')" id="pt-geo">几何</button>
+            <button class="ptbtn" onclick="setPat('none')" id="pt-none">素面</button>
+          </div>
+          <div class="crow2" style="margin-top:.7rem"><span class="clbl">密度</span><input class="csl" type="range" id="vpd" min="10" max="100" value="55" oninput="uv()"><span class="cvl" id="vpd-v">55</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="ccol">
+      <p class="stitle">褐彩书法 · 你的言与古人的诗</p>
+      <div class="cprev" id="cprev">
+        <div class="cunder" id="cu">— 待匹配古诗将在此浮现 —</div>
+        <div class="ctop" id="ct" style="opacity:.28">你的<br>心声<br>将书<br>于此</div>
+      </div>
+      <button class="gbtn" id="gbtn" onclick="genCalli()"><div class="sdot"></div>AI 书写褐彩 · 共成一瓷</button>
+      <div class="anote" id="anote"></div>
+      <button class="nbtn" id="to3" onclick="goS(3)">进入第三阶 · 永存 →</button>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 3 -->
+<section class="stage" id="stage3">
+  <div class="shd"><div class="snum">第三阶</div><div><h2>永存 · 窑火中的永恒</h2><p>ETERNITY · FIRED INTO IMMORTALITY</p></div></div>
+  <div class="kwrap">
+    <div class="ktheat">
+      <canvas id="kc" width="780" height="420"></canvas>
+      <div class="kstat" id="kstat">虚拟柴窑，等待你的瓷器入窑烧制</div>
+      <div class="kbtns">
+        <button class="fbtn" id="fbtn" onclick="startFire()">入窑烧制</button>
+        <button class="sbtn" id="svbtn" onclick="saveArt()">保存数字藏品</button>
+      </div>
+    </div>
+    <div class="acard" id="acard">
+      <div class="atitle">· 诗瓷数字藏品 ·</div>
+      <div class="ainner">
+        <div class="aves"><canvas id="artvc" width="180" height="220"></canvas></div>
+        <div class="ameta">
+          <div class="mi"><span class="ml">今人之言</span><div class="mv" id="ar-word"></div></div>
+          <div class="mi"><span class="ml">情绪感知</span><div class="mv" id="ar-emo"></div></div>
+          <div class="mi"><span class="ml">千年回声</span><div class="mv" id="ar-poem"></div></div>
+          <div class="mi"><span class="ml">器型釉色</span><div class="mv" id="ar-vessel"></div></div>
+        </div>
+      </div>
+      <div class="poem-insight">
+        <span class="pi-title">诗意解读</span>
+        <div class="pi-text" id="pi-interp"></div>
+        <div class="pi-modern" id="pi-modern"></div>
+      </div>
+      <div class="acert">
+        <div class="acttl">詩瓷守護者</div>
+        <div class="acsub">此瓷承载今人心声，与千年前无名诗人共处一釉</div>
+        <div class="acid" id="acid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ═══════════════ DATA ═══════════════ */
+const POEMS=[
+  {t:"君生我未生，我生君已老。",e:"miss",s:"长沙窑出土·唐",i:"以时间错位喻相见之难，生命如两条不相交的轨道，擦肩而过便是永别。",m:"今人常叹缘分难料，相遇总在错误的时间——这句诗写尽了所有来不及的心意。"},
+  {t:"白玉非为宝，千金我不需。",e:"hope",s:"长沙窑出土·唐",i:"以白玉千金为反衬，道出真正所求非物质，而是内心深处更珍贵的东西。",m:"在物欲横流的今天，这句话提醒我们：金钱买不到的，才是真正想要的。"},
+  {t:"离国离家整日愁，忍将泪眼更登楼。",e:"regret",s:"长沙窑出土·唐",i:"客居异乡，以登楼望远排解愁思，却又忍泪——情绪的克制中藏着更深的悲伤。",m:"漂泊在外的人都懂，思乡不只是念一个地方，更是念一种归属感。"},
+  {t:"人归千里外，心赤何处安。",e:"miss",s:"长沙窑出土·唐",i:"人在千里之外，心却如赤子无处安放。距离拉扯着灵魂，归处不知在何方。",m:"异地、异国、异城——身体可以移动，但心的根始终钉在某个地方。"},
+  {t:"春水满四泽，夏云多奇峰。",e:"joy",s:"长沙窑出土·唐",i:"描绘自然之盛景，春水丰沛、夏云壮丽，自然之美令人心旷神怡。",m:"放下手机，抬头看看——世界从未停止美丽，只是我们太少驻足。"},
+  {t:"一别行千里，来时未有期。",e:"miss",s:"长沙窑出土·唐",i:"分别即是无期，千里路途隔断相见，不知何日重逢——离别的沉默比哭声更重。",m:"每一次告别都可能是最后一次，这句话让人更珍视每一次相聚。"},
+  {t:"天下有情人，梦中长相见。",e:"miss",s:"长沙窑出土·唐",i:"以梦境为舞台，让相思在现实无法企及之处得以延续——梦是情感最后的避难所。",m:"思念一个人到深处，连梦里都不舍得醒来。"},
+  {t:"无事莫苦思，苦思损精神。",e:"hope",s:"长沙窑出土·唐",i:"告诫世人不要过度忧虑——忧思耗神，不如放下执念，顺应生命的流动。",m:"现代人焦虑症高发，这句千年前的劝告今天读来格外中肯。"},
+  {t:"书来寄消息，千万倍珍重。",e:"miss",s:"长沙窑出土·唐",i:"以书信寄情，叮嘱对方珍重——每一字都是跨越距离的温柔与牵挂。",m:"当我们用微信秒回的时候，想象一下等一封信要等几个月的心情。"},
+  {t:"男儿重义气，何用钱刀为。",e:"hope",s:"长沙窑出土·唐",i:"将义气置于金钱之上，彰显唐代市井中朴素而坚定的价值观。",m:"在一个量化一切的时代，有些东西依然无法用数字衡量。"},
+  {t:"岁岁长相见，日日眉上眉。",e:"joy",s:"长沙窑出土·唐",i:"以重复的岁岁、日日表达对相守的渴望，情感朴实而真挚。",m:"最美的感情不是轰轰烈烈，而是每天都能见到，每天都不觉得腻。"},
+  {t:"长恨人心不如水，等闲平地起波澜。",e:"regret",s:"长沙窑出土·唐",i:"以水的平静对比人心的善变，感叹世情冷暖、人际关系的复杂无常。",m:"网络时代人心更难预测，这句话说出了多少人的无奈。"},
+  {t:"入泥三分深，出土万年香。",e:"hope",s:"长沙窑出土·唐",i:"以陶器的烧制比喻：深入泥土的历练，换来千年流传的芬芳——磨砺出价值。",m:"那些压着你的重担，也许正在塑造你。"},
+  {t:"少年心似铁，到老随波流。",e:"regret",s:"长沙窑出土·唐",i:"少年的坚定与老来的随顺形成对比——岁月磨去棱角，是成熟还是妥协？",m:"你还记得自己十八岁时立下的誓言吗？那个人还在吗？"},
+  {t:"不经冬寒苦，难得梅花香。",e:"hope",s:"长沙窑出土·唐",i:"以梅花经冬方香喻人须经历苦难方能成就——寒苦是香气的代价。",m:"所有你正在经历的困难，都是你未来故事里最有力量的那一段。"},
+  {t:"此心安处是吾乡，何须万里觅他方。",e:"hope",s:"长沙窑出土·唐",i:"内心安定之处即为故乡，无需远求——归属感源自内心，非地域所限。",m:"在城市漂泊的人，终于明白：家不是一个地方，是一种感觉。"},
+  {t:"千里孤坟，无处话凄凉。",e:"regret",s:"长沙窑出土·唐",i:"以千里之隔的孤坟表达无处倾诉的悲凉——生死相隔，话语无处可去。",m:"有些话，来不及说；有些人，再也回不来了。"},
+  {t:"江上往来人，但爱鲈鱼美。",e:"joy",s:"长沙窑出土·唐",i:"描写江边渔人与往来商旅，借鲈鱼之美写世俗生活的满足与平淡之乐。",m:"人生中最珍贵的快乐，往往就藏在一顿好饭里。"},
+  {t:"我心已不在，天涯何处无芳草。",e:"regret",s:"长沙窑出土·唐",i:"放下执念、洒脱离去——天涯处处有新生，旧情已逝，前路无限可能。",m:"放手，不一定是失去，也许是给彼此一个重新开始的机会。"},
+  {t:"人生自古谁无死，留取丹心照汗青。",e:"hope",s:"长沙窑出土·唐",i:"以生死大义立志，丹心留史——死亡不可避免，但精神可以永存。",m:"我们都会消失，但我们做过的事、爱过的人，会以某种方式继续存在。"},
+];
+const EMO={miss:{label:"思念",cls:"b-miss"},hope:{label:"希望",cls:"b-hope"},regret:{label:"遗憾",cls:"b-regret"},joy:{label:"欢喜",cls:"b-joy"}};
+const HISTDATA=[
+  {era:"公元618–907",name:"长沙窑的诞生",desc:"唐代湖南铜官，无名工匠烧制出中国最早的釉下彩绘，开创瓷器书写先河。",scene:"dawn"},
+  {era:"海上丝绸之路",name:"黑石号沉船",desc:"满载六万七千件长沙窑瓷器的阿拉伯商船，在爪哇海沉没，沉睡千年后重见天日。",scene:"ship"},
+  {era:"工匠的秘密",name:"写诗入瓷",desc:"普通工匠随手将心声写在胚胎上，120余首无名诗人的真实情感，就此烧进釉里。",scene:"write"},
+  {era:"釉色革命",name:"褐彩之美",desc:"铁锈褐彩在青釉之上自由流淌，每一件都是孤品，无法复制——这是窑火的即兴诗。",scene:"glaze"},
+];
+const CRAFT_SAYS=[
+  "这泥土，取自湘江边……","把心思写进去，烧出来才有魂。","柴要够干，火才旺。","等它冷透了再开窑，急不得。","每一件都是孤品，你看这釉色……","这首诗，是昨晚做梦梦到的。","入了窑，就交给火神了。","烧好的，才算真的活了。"
+];
+
+/* ═══════════════ STATE ═══════════════ */
+const S={stage:0,word:"",emotion:"",poem:null,insight:"",firing:false,
+  shape:"ewer",gc:"#7aaa8e",gd:"#3d6b52",gn:"青釉",pattern:"poem",gloss:60,pd:55,muted:false,
+  poemInterp:"",poemModern:""};
+const V={h:62,b:50,m:30,f:22,gl:60,pd:55};
+
+/* ═══════════════ AUDIO ENGINE (fixed) ═══════════════ */
+let AC=null;
+function ac(){if(!AC)AC=new(window.AudioContext||window.webkitAudioContext)({latencyHint:'interactive'});return AC;}
+
+function vol(){return S.muted?0:1;}
+
+/* Ambient — pentatonic guqin drone, no repeating single note */
+let ambiStarted=false;
+function startAmbient(){
+  if(ambiStarted)return; ambiStarted=true;
+  const a=ac();
+  const master=a.createGain(); master.gain.value=vol()*0.08; master.connect(a.destination);
+  /* Low drone pads — major pentatonic: A2 C#3 E3 A3 B3 */
+  const drones=[110,138.6,164.8,220,246.9];
+  drones.forEach((f,i)=>{
+    const o=a.createOscillator(), g=a.createGain();
+    o.type=i<2?'sine':'triangle';
+    o.frequency.value=f;
+    g.gain.value=0.06/(i+1);
+    o.connect(g); g.connect(master); o.start();
+  });
+  /* Pentatonic harp arp scheduler */
+  const scale=[220,261.6,293.7,329.6,392,440,523.3,587.3,659.3,784];
+  const patterns=[[0,2,4,7,6,4,2,0],[0,4,7,9,7,4,0,2],[2,5,7,5,2,0,5,7],[0,3,5,8,7,5,3,0]];
+  let patIdx=0, noteT=a.currentTime+1;
+  function schedArp(){
+    const pat=patterns[patIdx%patterns.length]; patIdx++;
+    pat.forEach((si,ni)=>{
+      const t=noteT+ni*0.28;
+      const freq=scale[si%scale.length];
+      const o=a.createOscillator(), env=a.createGain(), flt=a.createBiquadFilter();
+      o.type='triangle'; o.frequency.value=freq;
+      flt.type='lowpass'; flt.frequency.value=2400; flt.Q.value=0.7;
+      env.gain.setValueAtTime(0,t);
+      env.gain.linearRampToValueAtTime(0.18,t+0.025);
+      env.gain.exponentialRampToValueAtTime(0.001,t+1.1);
+      o.connect(flt); flt.connect(env); env.connect(master);
+      o.start(t); o.stop(t+1.2);
+      /* overtone shimmer */
+      const o2=a.createOscillator(), env2=a.createGain();
+      o2.type='sine'; o2.frequency.value=freq*2.01;
+      env2.gain.setValueAtTime(0,t);
+      env2.gain.linearRampToValueAtTime(0.04,t+0.02);
+      env2.gain.exponentialRampToValueAtTime(0.001,t+0.7);
+      o2.connect(env2); env2.connect(master);
+      o2.start(t); o2.stop(t+0.8);
+    });
+    noteT+=pat.length*0.28+(1.8+Math.random()*2.5);
+    setTimeout(schedArp,(pat.length*0.28+0.8)*1000);
+  }
+  schedArp();
+  window._ambiMaster=master;
+}
+
+function setAmbiVol(v){ if(window._ambiMaster) window._ambiMaster.gain.setTargetAtTime(v*0.08,ac().currentTime,0.3); }
+
+/* Recitation synth */
+function playRecitation(text){
+  if(S.muted)return;
+  const a=ac();
+  const master=a.createGain(); master.gain.value=0.22; master.connect(a.destination);
+  const vowelFreqs=[261.6,293.7,329.6,369.9,392,440,493.9,523.3];
+  let t=a.currentTime+0.05;
+  text.split('').forEach((c,i)=>{
+    /* main note */
+    const freq=vowelFreqs[i%vowelFreqs.length]*(0.97+Math.random()*0.06);
+    const o=a.createOscillator(), env=a.createGain();
+    o.type='sine'; o.frequency.value=freq;
+    o.frequency.setTargetAtTime(freq*(0.99+Math.random()*0.02),t+0.03,0.05);
+    env.gain.setValueAtTime(0,t);
+    env.gain.linearRampToValueAtTime(0.18,t+0.035);
+    env.gain.setTargetAtTime(0.08,t+0.07,0.05);
+    env.gain.linearRampToValueAtTime(0,t+0.2);
+    o.connect(env); env.connect(master); o.start(t); o.stop(t+0.22);
+    /* breath puff for consonant feel */
+    if(i%2===0){
+      const bufLen=Math.floor(a.sampleRate*0.06);
+      const buf=a.createBuffer(1,bufLen,a.sampleRate);
+      const d=buf.getChannelData(0);
+      for(let j=0;j<bufLen;j++) d[j]=(Math.random()*2-1)*Math.exp(-j/bufLen*5)*0.06;
+      const src=a.createBufferSource(), flt=a.createBiquadFilter();
+      src.buffer=buf; flt.type='bandpass'; flt.frequency.value=1000+i*60; flt.Q.value=0.8;
+      src.connect(flt); flt.connect(master); src.start(t);
+    }
+    t+=0.16+Math.random()*0.04;
+  });
+}
+
+/* Kiln sounds */
+function sndDoor(){
+  if(S.muted)return;
+  const a=ac();
+  /* master at low volume – this should feel distant and heavy */
+  const mg=a.createGain(); mg.gain.value=0.22; mg.connect(a.destination);
+
+  /* 1. Stone/earth low rumble – filtered noise, very low freq */
+  const rumbleLen=a.sampleRate*2.5;
+  const rBuf=a.createBuffer(1,rumbleLen,a.sampleRate);
+  const rd=rBuf.getChannelData(0);
+  for(let i=0;i<rumbleLen;i++) rd[i]=(Math.random()*2-1)*0.4;
+  const rSrc=a.createBufferSource();
+  rSrc.buffer=rBuf;
+  const rLow=a.createBiquadFilter(); rLow.type='lowpass'; rLow.frequency.value=80; rLow.Q.value=1.5;
+  const rEnv=a.createGain();
+  rEnv.gain.setValueAtTime(0,a.currentTime);
+  rEnv.gain.linearRampToValueAtTime(0.5,a.currentTime+0.3);
+  rEnv.gain.setTargetAtTime(0.2,a.currentTime+0.6,0.4);
+  rEnv.gain.linearRampToValueAtTime(0,a.currentTime+2.4);
+  rSrc.connect(rLow); rLow.connect(rEnv); rEnv.connect(mg); rSrc.start();
+
+  /* 2. Wooden groan – slow sine FM, low pitch, gradual */
+  const t0=a.currentTime;
+  const groan=a.createOscillator();
+  const groanMod=a.createOscillator();
+  const groanModGain=a.createGain();
+  const groanEnv=a.createGain();
+  groan.type='sawtooth'; groan.frequency.setValueAtTime(38,t0);
+  groan.frequency.linearRampToValueAtTime(52,t0+1.2);
+  groan.frequency.linearRampToValueAtTime(34,t0+2.2);
+  groanMod.type='sine'; groanMod.frequency.value=1.8;
+  groanModGain.gain.value=6;
+  groanMod.connect(groanModGain); groanModGain.connect(groan.frequency);
+  groanEnv.gain.setValueAtTime(0,t0);
+  groanEnv.gain.linearRampToValueAtTime(0.35,t0+0.5);
+  groanEnv.gain.exponentialRampToValueAtTime(0.001,t0+2.5);
+  const groanFilt=a.createBiquadFilter(); groanFilt.type='lowpass'; groanFilt.frequency.value=200;
+  groan.connect(groanFilt); groanFilt.connect(groanEnv); groanEnv.connect(mg);
+  groan.start(t0); groanMod.start(t0);
+  groan.stop(t0+2.6); groanMod.stop(t0+2.6);
+
+  /* 3. Distant thud as door lands */
+  const thudLen=Math.floor(a.sampleRate*0.18);
+  const tBuf=a.createBuffer(1,thudLen,a.sampleRate);
+  const td=tBuf.getChannelData(0);
+  for(let i=0;i<thudLen;i++){
+    const t=i/a.sampleRate;
+    td[i]=(Math.random()*2-1)*Math.exp(-t*22)*0.6;
+  }
+  const tSrc=a.createBufferSource(); tSrc.buffer=tBuf;
+  const tFilt=a.createBiquadFilter(); tFilt.type='lowpass'; tFilt.frequency.value=120;
+  const tEnv=a.createGain(); tEnv.gain.value=0.7;
+  tSrc.connect(tFilt); tFilt.connect(tEnv); tEnv.connect(mg);
+  tSrc.start(t0+1.4);
+}
+
+function sndCrackle(duration){
+  if(S.muted)return;
+  const a=ac();
+  const mg=a.createGain(); mg.gain.value=vol()*0.14; mg.connect(a.destination);
+
+  /* Continuous wood-fire noise layer — low rumble with slow amplitude variation */
+  const totalLen=Math.floor(a.sampleRate*Math.min(duration,12));
+  const buf=a.createBuffer(1,totalLen,a.sampleRate);
+  const d=buf.getChannelData(0);
+  /* Generate noise with slow AM to simulate wood crackling naturally */
+  for(let i=0;i<totalLen;i++){
+    const t=i/a.sampleRate;
+    /* slow amplitude envelope — fire breathing */
+    const breathe=0.5+0.5*Math.sin(t*1.3)*Math.sin(t*0.7+1)*Math.sin(t*2.1+2);
+    d[i]=(Math.random()*2-1)*0.3*Math.max(0,breathe);
+  }
+  const src=a.createBufferSource(); src.buffer=buf;
+  /* Band-pass around 200-800Hz = wood crackle range, not high treble */
+  const bp=a.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=380; bp.Q.value=0.6;
+  const lp=a.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=900;
+  /* Fade in and fade out gently */
+  const env=a.createGain();
+  env.gain.setValueAtTime(0,a.currentTime);
+  env.gain.linearRampToValueAtTime(1,a.currentTime+1.5);
+  env.gain.setValueAtTime(1,a.currentTime+duration-2);
+  env.gain.linearRampToValueAtTime(0,a.currentTime+duration);
+  src.connect(bp); bp.connect(lp); lp.connect(env); env.connect(mg);
+  src.start();
+
+  /* Occasional soft wood pop — low-pitched, rounded, spaced randomly */
+  let popT=a.currentTime+0.5;
+  function schedPop(){
+    if(popT>a.currentTime+duration)return;
+    const popLen=Math.floor(a.sampleRate*0.15);
+    const pBuf=a.createBuffer(1,popLen,a.sampleRate);
+    const pd=pBuf.getChannelData(0);
+    for(let i=0;i<popLen;i++){
+      const t=i/a.sampleRate;
+      /* rounded decay, NOT sharp */
+      pd[i]=(Math.random()*2-1)*0.25*Math.exp(-t*18)*(1-Math.exp(-t*60));
+    }
+    const pSrc=a.createBufferSource(); pSrc.buffer=pBuf;
+    const pFilt=a.createBiquadFilter(); pFilt.type='lowpass'; pFilt.frequency.value=300+Math.random()*200;
+    const pEnv=a.createGain(); pEnv.gain.value=0.4+Math.random()*0.3;
+    pSrc.connect(pFilt); pFilt.connect(pEnv); pEnv.connect(mg);
+    pSrc.start(popT);
+    /* next pop in 0.8 – 3 seconds */
+    popT+=0.8+Math.random()*2.2;
+    setTimeout(schedPop, (popT-a.currentTime)*900);
+  }
+  schedPop();
+}
+
+function sndSizzle(){
+  if(S.muted)return;
+  const a=ac();
+  const mg=a.createGain(); mg.gain.value=vol()*0.12; mg.connect(a.destination);
+
+  /* Steam hiss — gentle high-freq noise, very soft */
+  const len=Math.floor(a.sampleRate*2.2);
+  const buf=a.createBuffer(1,len,a.sampleRate);
+  const d=buf.getChannelData(0);
+  for(let i=0;i<len;i++){
+    const t=i/a.sampleRate;
+    d[i]=(Math.random()*2-1)*0.12*(1-Math.exp(-t*4))*Math.exp(-t*0.6);
+  }
+  const src=a.createBufferSource(); src.buffer=buf;
+  const hp=a.createBiquadFilter(); hp.type='highpass'; hp.frequency.value=2800;
+  const lp=a.createBiquadFilter(); lp.type='lowpass'; lp.frequency.value=6000;
+  src.connect(hp); hp.connect(lp); lp.connect(mg); src.start();
+
+  /* Soft rising tone — clay vibrating at high temp */
+  const o=a.createOscillator(), env=a.createGain();
+  o.type='sine'; o.frequency.setValueAtTime(820,a.currentTime);
+  o.frequency.linearRampToValueAtTime(960,a.currentTime+1.8);
+  env.gain.setValueAtTime(0,a.currentTime);
+  env.gain.linearRampToValueAtTime(0.06,a.currentTime+0.4);
+  env.gain.exponentialRampToValueAtTime(0.001,a.currentTime+2.2);
+  o.connect(env); env.connect(mg); o.start(); o.stop(a.currentTime+2.3);
+}
+
+function sndComplete(){
+  if(S.muted)return;
+  const a=ac();
+  const mg=a.createGain(); mg.gain.value=vol()*0.28; mg.connect(a.destination);
+
+  /* Ceramic bowl strike — staggered harmonics with long decay */
+  const harmonics=[
+    {f:440, amp:0.3, decay:4.5},
+    {f:880, amp:0.18, decay:3.2},
+    {f:1318, amp:0.1, decay:2.4},
+    {f:1760, amp:0.06, decay:1.8},
+  ];
+  harmonics.forEach((h,i)=>{
+    const o=a.createOscillator(), env=a.createGain();
+    o.type='sine';
+    /* slight inharmonicity for ceramic feel */
+    o.frequency.value=h.f*(1+i*0.003);
+    env.gain.setValueAtTime(0, a.currentTime+i*0.04);
+    env.gain.linearRampToValueAtTime(h.amp, a.currentTime+i*0.04+0.008);
+    env.gain.exponentialRampToValueAtTime(0.001, a.currentTime+i*0.04+h.decay);
+    o.connect(env); env.connect(mg);
+    o.start(a.currentTime+i*0.04);
+    o.stop(a.currentTime+i*0.04+h.decay+0.1);
+  });
+
+  /* Soft breath attack — mallet hitting clay surface */
+  const atLen=Math.floor(a.sampleRate*0.04);
+  const atBuf=a.createBuffer(1,atLen,a.sampleRate);
+  const atd=atBuf.getChannelData(0);
+  for(let i=0;i<atLen;i++) atd[i]=(Math.random()*2-1)*Math.exp(-i/atLen*8)*0.3;
+  const atSrc=a.createBufferSource(); atSrc.buffer=atBuf;
+  const atFilt=a.createBiquadFilter(); atFilt.type='bandpass'; atFilt.frequency.value=600;
+  const atEnv=a.createGain(); atEnv.gain.value=0.5;
+  atSrc.connect(atFilt); atFilt.connect(atEnv); atEnv.connect(mg); atSrc.start();
+}
+
+function toggleMute(){
+  S.muted=!S.muted; setAmbiVol(S.muted?0:1);
+  document.getElementById('aico').innerHTML=S.muted
+    ?'<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>'
+    :'<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>';
+}
+
+document.addEventListener('click',()=>{try{ac().resume();startAmbient();}catch(e){}},{once:true});
+
+/* ═══════════════ NAV ═══════════════ */
+function goS(n){
+  document.getElementById('hero').style.display=n===0?'':'none';
+  [1,2,3].forEach(i=>document.getElementById('stage'+i).classList.toggle('active',i===n&&n>0));
+  ['n0','n1','n2','n3'].forEach((id,i)=>document.getElementById(id).classList.toggle('active',i===n));
+  document.getElementById('pbar').style.width=['0%','33%','66%','100%'][n]||'0%';
+  S.stage=n; window.scrollTo({top:0,behavior:'smooth'});
+  if(n===1)buildHistory();
+  if(n===2)initS2();
+  if(n===3)initS3();
+}
+
+/* ═══════════════ HERO CANVAS ═══════════════ */
+(function heroFire(){
+  const cv=document.getElementById('hbg'), ctx=cv.getContext('2d');
+  const pts=[];
+  function resize(){cv.width=window.innerWidth;cv.height=window.innerHeight;}
+  resize(); window.addEventListener('resize',resize);
+  for(let i=0;i<140;i++) pts.push({x:Math.random()*1200,y:Math.random()*800,r:Math.random()*2.2+.3,vx:(Math.random()-.5)*.35,vy:-Math.random()*.55-.1,a:Math.random()*.45,hot:Math.random()>.65});
+  function draw(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    /* deep floor glow */
+    const g=ctx.createRadialGradient(cv.width/2,cv.height,30,cv.width/2,cv.height,cv.height*.65);
+    g.addColorStop(0,'rgba(200,80,10,.32)'); g.addColorStop(.4,'rgba(100,35,0,.14)'); g.addColorStop(1,'transparent');
+    ctx.fillStyle=g; ctx.fillRect(0,0,cv.width,cv.height);
+    /* side glow columns */
+    [[0,cv.height*.45],[cv.width,cv.height*.45]].forEach(([x,y])=>{
+      const rg=ctx.createRadialGradient(x,y,10,x,y,cv.width*.32);
+      rg.addColorStop(0,'rgba(232,98,42,.24)'); rg.addColorStop(1,'transparent');
+      ctx.fillStyle=rg; ctx.fillRect(0,0,cv.width,cv.height);
+    });
+    pts.forEach(p=>{
+      ctx.beginPath(); ctx.arc(p.x%cv.width,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.hot?`rgba(255,${Math.round(110+Math.random()*90)},10,${p.a})`:`rgba(200,168,130,${p.a})`;
+      ctx.fill(); p.x+=p.vx; p.y+=p.vy;
+      if(p.y<-8){p.y=cv.height+8;p.x=Math.random()*cv.width;}
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ═══════════════ HERO WHISPERS + CRAFTSMEN ═══════════════ */
+(function spawnWhispers(){
+  const layer=document.getElementById('wlayer'); let pi=0;
+  function spawn(){
+    const el=document.createElement('div'); el.className='whisper';
+    el.textContent=POEMS[pi%POEMS.length].t;
+    el.style.left=(3+Math.random()*88)+'%';
+    const dur=20+Math.random()*14;
+    el.style.animationDuration=dur+'s'; el.style.animationDelay=(Math.random()*2.5)+'s';
+    el.style.fontSize=(.68+Math.random()*.3)+'rem';
+    layer.appendChild(el); pi++;
+    setTimeout(()=>el.remove(),(dur+4)*1000);
+  }
+  spawn(); setInterval(spawn,3000);
+})();
+
+(function spawnCraftsmen(){
+  const layer=document.getElementById('craftlayer');
+  let si=0;
+
+  function makePotterCanvas(){
+    const cv=document.createElement('canvas');
+    cv.width=80; cv.height=130; cv.style.display='block';
+    const ctx=cv.getContext('2d');
+    const poses=['throw','write','watch'];
+    const pose=poses[si%3];
+    let fr=0;
+    const c='rgba(200,168,130,0.85)', cd='rgba(139,94,60,0.72)', cf='rgba(240,168,48,0.6)';
+    function draw(){
+      ctx.clearRect(0,0,80,130);
+      /* robe */
+      ctx.beginPath();
+      ctx.moveTo(22,38); ctx.bezierCurveTo(14,55,10,82,12,118);
+      ctx.lineTo(68,118); ctx.bezierCurveTo(70,82,66,55,58,38); ctx.closePath();
+      ctx.fillStyle='rgba(55,30,8,0.75)'; ctx.fill();
+      ctx.strokeStyle=c; ctx.lineWidth=1.1; ctx.stroke();
+      /* collar */
+      ctx.beginPath(); ctx.moveTo(30,38); ctx.lineTo(40,56); ctx.lineTo(50,38);
+      ctx.strokeStyle=cd; ctx.lineWidth=0.9; ctx.stroke();
+      /* belt */
+      ctx.beginPath(); ctx.moveTo(15,74); ctx.lineTo(65,74);
+      ctx.strokeStyle=cd; ctx.lineWidth=1.3; ctx.stroke();
+      /* head */
+      ctx.beginPath(); ctx.ellipse(40,22,10,12,0,0,Math.PI*2);
+      ctx.fillStyle='rgba(178,128,78,0.88)'; ctx.fill();
+      ctx.strokeStyle=c; ctx.lineWidth=0.9; ctx.stroke();
+      /* hair bun */
+      ctx.beginPath(); ctx.ellipse(40,11,5,4,0,0,Math.PI*2);
+      ctx.fillStyle='rgba(25,12,4,0.92)'; ctx.fill();
+      /* hairpin */
+      ctx.beginPath(); ctx.moveTo(34,9); ctx.lineTo(47,7);
+      ctx.strokeStyle=cf; ctx.lineWidth=1.1; ctx.stroke();
+      /* eyes */
+      ctx.beginPath(); ctx.arc(36,21,1.3,0,Math.PI*2);
+      ctx.arc(44,21,1.3,0,Math.PI*2);
+      ctx.fillStyle='rgba(25,10,3,0.9)'; ctx.fill();
+      /* mouth */
+      ctx.beginPath(); ctx.arc(40,26,2.2,0.1,Math.PI-0.1);
+      ctx.strokeStyle='rgba(100,52,28,0.65)'; ctx.lineWidth=0.8; ctx.stroke();
+      /* feet */
+      ctx.beginPath();
+      ctx.moveTo(25,118); ctx.lineTo(19,126);
+      ctx.moveTo(55,118); ctx.lineTo(61,126);
+      ctx.strokeStyle=c; ctx.lineWidth=3.2; ctx.lineCap='round'; ctx.stroke();
+      /* pose-specific arms + props */
+      if(pose==='throw'){
+        const sway=Math.sin(fr*0.11)*5;
+        /* left arm down */
+        ctx.beginPath(); ctx.moveTo(22,52);
+        ctx.quadraticCurveTo(8,70,13+sway,92);
+        ctx.strokeStyle=c; ctx.lineWidth=4; ctx.lineCap='round'; ctx.stroke();
+        /* right arm up */
+        ctx.beginPath(); ctx.moveTo(58,52);
+        ctx.quadraticCurveTo(72,40,66,28); ctx.stroke();
+        /* spinning clay lump */
+        ctx.beginPath(); ctx.ellipse(13+sway,96,10,7,0.25,0,Math.PI*2);
+        ctx.fillStyle='rgba(155,105,55,0.68)'; ctx.fill();
+        ctx.strokeStyle=cd; ctx.lineWidth=0.9; ctx.stroke();
+        /* wheel lines */
+        ctx.beginPath(); ctx.ellipse(13+sway,96,4,2.5,0.25,0,Math.PI*2);
+        ctx.strokeStyle=cd; ctx.lineWidth=0.6; ctx.stroke();
+      } else if(pose==='write'){
+        const wy=Math.sin(fr*0.09)*2.5;
+        ctx.beginPath(); ctx.moveTo(22,52);
+        ctx.quadraticCurveTo(20,70,30,82+wy);
+        ctx.strokeStyle=c; ctx.lineWidth=4; ctx.lineCap='round'; ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(58,52);
+        ctx.quadraticCurveTo(60,68,50,80+wy); ctx.stroke();
+        /* brush handle */
+        ctx.beginPath(); ctx.moveTo(40,78+wy); ctx.lineTo(40,103+wy);
+        ctx.strokeStyle='rgba(200,168,130,0.92)'; ctx.lineWidth=1.6; ctx.stroke();
+        /* brush tip */
+        ctx.beginPath(); ctx.moveTo(37,103+wy); ctx.lineTo(40,110+wy); ctx.lineTo(43,103+wy);
+        ctx.fillStyle='rgba(20,10,3,0.85)'; ctx.fill();
+        /* small vessel */
+        ctx.beginPath(); ctx.ellipse(40,120,11,6.5,0,0,Math.PI*2);
+        ctx.fillStyle='rgba(122,170,142,0.58)'; ctx.fill();
+        ctx.strokeStyle=cd; ctx.lineWidth=0.8; ctx.stroke();
+        /* text on vessel */
+        ctx.font='6px serif'; ctx.fillStyle='rgba(40,15,3,0.9)'; ctx.textAlign='center';
+        ctx.fillText('诗',40,122);
+      } else {
+        /* watch pose */
+        const lean=Math.sin(fr*0.07)*1.8;
+        ctx.beginPath(); ctx.moveTo(22,52);
+        ctx.quadraticCurveTo(16,70+lean,26,84+lean);
+        ctx.strokeStyle=c; ctx.lineWidth=4; ctx.lineCap='round'; ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(58,52);
+        ctx.quadraticCurveTo(64,70+lean,54,84+lean); ctx.stroke();
+        /* poker tool */
+        ctx.beginPath(); ctx.moveTo(56,54); ctx.lineTo(72,78);
+        ctx.strokeStyle='rgba(200,168,130,0.55)'; ctx.lineWidth=1.6; ctx.stroke();
+        /* small flame at tip */
+        ctx.beginPath(); ctx.arc(73,79,3,0,Math.PI*2);
+        ctx.fillStyle='rgba(240,140,20,0.55)'; ctx.fill();
+      }
+      fr++;
+      cv._raf=requestAnimationFrame(draw);
+    }
+    draw();
+    return cv;
+  }
+
+  function spawn(){
+    const container=document.createElement('div');
+    /* Place craftsmen only on far LEFT or far RIGHT edges, below hero text */
+    const side=Math.random()<0.5?'left':'right';
+    const leftPct=side==='left'?(2+Math.random()*10):(82+Math.random()*10);
+    const bottomPct=4+Math.random()*12;
+    container.style.cssText=
+      'position:absolute;left:'+leftPct+'%;bottom:'+bottomPct+'%;opacity:0;transition:opacity 1s;z-index:4;';
+    const cv=makePotterCanvas();
+    cv.style.opacity='0.8';
+    const bubble=document.createElement('div');
+    bubble.className='craftsman-bubble';
+    bubble.textContent=CRAFT_SAYS[si%CRAFT_SAYS.length]; si++;
+    /* bubble always points inward from edge */
+    if(side==='left'){
+      bubble.style.cssText='position:absolute;bottom:132px;left:0;';
+    } else {
+      bubble.style.cssText='position:absolute;bottom:132px;right:0;';
+    }
+    container.appendChild(cv);
+    container.appendChild(bubble);
+    layer.appendChild(container);
+    requestAnimationFrame(()=>{ container.style.opacity='1'; });
+    const life=(7+Math.random()*5)*1000;
+    setTimeout(()=>{
+      container.style.opacity='0';
+      if(cv._raf) cancelAnimationFrame(cv._raf);
+      setTimeout(()=>container.remove(),1300);
+    }, life);
+  }
+
+  spawn(); setInterval(spawn,9000);
+})();
+/* ═══════════════ HISTORY STRIP ═══════════════ */
+function buildHistory(){
+  const strip=document.getElementById('hstrip');
+  if(strip.children.length)return;
+  HISTDATA.forEach((h,i)=>{
+    const el=document.createElement('div'); el.className='hist-item'+(i===0?' active':'');
+    const cv=document.createElement('canvas'); cv.width=190; cv.height=110; cv.style.opacity='.85';
+    drawHistScene(cv,h.scene);
+    el.appendChild(cv);
+    const era=document.createElement('div'); era.className='hist-era'; era.textContent=h.era;
+    const name=document.createElement('div'); name.className='hist-name'; name.textContent=h.name;
+    const desc=document.createElement('div'); desc.className='hist-desc'; desc.textContent=h.desc;
+    el.append(era,name,desc);
+    el.onclick=()=>{document.querySelectorAll('.hist-item').forEach(x=>x.classList.remove('active'));el.classList.add('active');};
+    strip.appendChild(el);
+  });
+}
+
+function drawHistScene(cv,scene){
+  const ctx=cv.getContext('2d'), W=cv.width, H=cv.height;
+  ctx.fillStyle='#100800'; ctx.fillRect(0,0,W,H);
+  if(scene==='dawn'){
+    /* kiln silhouette + sunrise */
+    const g=ctx.createRadialGradient(W/2,H,10,W/2,H,H*.8);
+    g.addColorStop(0,'rgba(240,168,48,.35)'); g.addColorStop(1,'transparent');
+    ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+    /* kiln arch */
+    ctx.beginPath(); ctx.moveTo(30,H); ctx.lineTo(30,H*.5);
+    ctx.bezierCurveTo(30,H*.15,W-30,H*.15,W-30,H*.5); ctx.lineTo(W-30,H); ctx.closePath();
+    ctx.fillStyle='#1a0c04'; ctx.fill(); ctx.strokeStyle='rgba(200,168,130,.3)'; ctx.lineWidth=.8; ctx.stroke();
+    /* glow in door */
+    const dg=ctx.createRadialGradient(W/2,H*.7,2,W/2,H*.7,35);
+    dg.addColorStop(0,'rgba(255,140,0,.6)'); dg.addColorStop(1,'transparent');
+    ctx.fillStyle=dg; ctx.fillRect(W/2-38,H*.45,76,H*.45);
+    /* craftsman figure */
+    drawStickFigure(ctx,W*.2,H*.82,.55);
+  } else if(scene==='ship'){
+    /* ocean waves */
+    for(let w=0;w<4;w++){
+      ctx.beginPath(); ctx.moveTo(0,H*.5+w*8);
+      for(let x=0;x<=W;x+=10) ctx.lineTo(x,H*.5+w*8+Math.sin(x*.12+w)*(4-w));
+      ctx.lineTo(W,H); ctx.lineTo(0,H); ctx.closePath();
+      ctx.fillStyle=`rgba(30,60,90,${.3+w*.12})`; ctx.fill();
+    }
+    /* ship hull */
+    ctx.beginPath(); ctx.moveTo(W*.1,H*.45); ctx.bezierCurveTo(W*.08,H*.55,W*.88,H*.58,W*.9,H*.45);
+    ctx.lineTo(W*.8,H*.38); ctx.lineTo(W*.2,H*.38); ctx.closePath();
+    ctx.fillStyle='#2a1a08'; ctx.fill(); ctx.strokeStyle='rgba(200,168,130,.4)'; ctx.lineWidth=.8; ctx.stroke();
+    /* mast */
+    ctx.beginPath(); ctx.moveTo(W*.5,H*.38); ctx.lineTo(W*.5,H*.1);
+    ctx.strokeStyle='rgba(200,168,130,.5)'; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(W*.5,H*.12); ctx.lineTo(W*.72,H*.28); ctx.lineTo(W*.5,H*.28); ctx.closePath();
+    ctx.fillStyle='rgba(139,94,60,.5)'; ctx.fill();
+  } else if(scene==='write'){
+    /* workbench with vessel */
+    ctx.fillStyle='#1e1006'; ctx.fillRect(0,H*.6,W,H*.4);
+    ctx.strokeStyle='rgba(200,168,130,.2)'; ctx.lineWidth=.5;
+    ctx.beginPath(); ctx.moveTo(0,H*.6); ctx.lineTo(W,H*.6); ctx.stroke();
+    /* vessel */
+    ctx.beginPath(); ctx.ellipse(W*.38,H*.5,18,28,0,0,Math.PI*2);
+    ctx.fillStyle='#7aaa8e'; ctx.globalAlpha=.7; ctx.fill();
+    ctx.strokeStyle='rgba(200,168,130,.4)'; ctx.stroke(); ctx.globalAlpha=1;
+    /* brush */
+    ctx.beginPath(); ctx.moveTo(W*.62,H*.22); ctx.lineTo(W*.52,H*.54);
+    ctx.strokeStyle='rgba(200,168,130,.6)'; ctx.lineWidth=1.5; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(W*.52,H*.54); ctx.lineTo(W*.49,H*.6); ctx.lineTo(W*.54,H*.57); ctx.closePath();
+    ctx.fillStyle='#3d2b1a'; ctx.fill();
+    /* craftsman */
+    drawStickFigure(ctx,W*.72,H*.85,.5);
+    /* text on vessel */
+    ctx.font="7px 'Ma Shan Zheng',cursive"; ctx.fillStyle='rgba(50,20,5,.85)'; ctx.textAlign='center';
+    '君生'.split('').forEach((c,i)=>ctx.fillText(c,W*.38,H*.4+i*11));
+  } else {
+    /* glaze scene */
+    const g=ctx.createLinearGradient(0,0,W,0);
+    g.addColorStop(0,'rgba(122,170,142,.22)'); g.addColorStop(.5,'rgba(240,168,48,.18)'); g.addColorStop(1,'rgba(139,94,60,.22)');
+    ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+    /* row of pots */
+    [[W*.18,H*.6,14,22],[W*.38,H*.55,18,30],[W*.58,H*.58,16,26],[W*.78,H*.62,12,18]].forEach(([x,y,rw,rh])=>{
+      ctx.beginPath(); ctx.ellipse(x,y,rw,rh,0,0,Math.PI*2);
+      const colors=['#7aaa8e','#8b5e3c','#c9a227','#e8d5b8'];
+      ctx.fillStyle=colors[Math.floor(Math.random()*colors.length)]; ctx.globalAlpha=.65; ctx.fill();
+      ctx.strokeStyle='rgba(200,168,130,.35)'; ctx.globalAlpha=1; ctx.stroke();
+    });
+    drawStickFigure(ctx,W*.5,H*.84,.52);
+  }
+}
+
+function drawStickFigure(ctx,x,y,scale){
+  const s=scale||1;
+  ctx.save(); ctx.translate(x,y); ctx.scale(s,s);
+  ctx.strokeStyle='rgba(200,168,130,.65)'; ctx.lineWidth=1.2; ctx.lineCap='round';
+  ctx.beginPath(); ctx.arc(0,-36,6,0,Math.PI*2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0,-30); ctx.lineTo(0,-8);
+  ctx.moveTo(0,-22); ctx.lineTo(-12,-12); ctx.moveTo(0,-22); ctx.lineTo(12,-10);
+  ctx.moveTo(0,-8); ctx.lineTo(-8,10); ctx.moveTo(0,-8); ctx.lineTo(8,10);
+  ctx.stroke(); ctx.restore();
+}
+
+/* ═══════════════ STAGE 1 ═══════════════ */
+(function buildCorridor(){
+  const r1=document.getElementById('row1'), r2=document.getElementById('row2');
+  POEMS.forEach((p,i)=>{
+    const el=document.createElement('div'); el.className='chip';
+    el.textContent=p.t; el.title='点击聆听·'+p.s;
+    el.onclick=()=>recitePoem(p,el);
+    (i%2===0?r1:r2).appendChild(el);
+  });
+  let p1=0,p2=0;
+  setInterval(()=>{p1+=.55;if(p1>r1.scrollWidth-r1.clientWidth)p1=0;r1.scrollLeft=p1;},18);
+  setInterval(()=>{p2+=.48;if(p2>r2.scrollWidth-r2.clientWidth)p2=0;r2.scrollLeft=r2.scrollWidth-r2.clientWidth-p2;},22);
+})();
+
+let recTimer=null;
+function recitePoem(p,el){
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('lit'));
+  el&&el.classList.add('lit');
+  document.getElementById('rpem').textContent=p.t;
+  document.getElementById('rsrc').textContent='—— '+p.s;
+  document.getElementById('rov').classList.add('show');
+  startAmbient(); playRecitation(p.t);
+  clearTimeout(recTimer); recTimer=setTimeout(closeRecite,p.t.length*180+2200);
+  el&&setTimeout(()=>el&&el.classList.add('played'),200);
+}
+function closeRecite(){document.getElementById('rov').classList.remove('show');clearTimeout(recTimer);}
+
+function onWI(){
+  const v=document.getElementById('winp').value;
+  document.getElementById('wc').textContent=v.length;
+  document.getElementById('abtn2').disabled=v.trim().length<2;
+  S.word=v;
+}
+
+/* ═══════════════ EMOTION ANALYSIS (精准) ═══════════════ */
+async function analyze(){
+  const word = document.getElementById('winp').value.trim();
+  if(!word){ document.getElementById('e1').classList.add('show'); return; }
+  document.getElementById('e1').classList.remove('show');
+  showLoad('正在感知你的心声……');
+
+  /* ── Step 1: local multi-dim scoring (always runs, instant) ── */
+  const local = localScore(word);
+  S.emotion = local.emotion;
+  S.poem    = local.poem;
+
+  /* Show local result immediately so user isn't waiting */
+  hideLoad();
+  renderEmo(local.reason, false);
+  setTimeout(()=>recitePoem(S.poem, null), 800);
+
+  /* ── Step 2: try AI refinement in background ── */
+  try {
+    const poemList = POEMS.map((p,i)=> i + ': ' + p.t).join('\n');
+    const aiPrompt = '分析这句心声的情感并匹配最共鸣的诗句。\n心声: ' + word + '\n情绪类别(四选一): miss思念 hope希望 regret遗憾 joy欢喜\n诗句列表:\n' + poemList + '\n只返回JSON，格式: {"emotion":"miss","index":0,"reason":"原因"}';
+    const body = JSON.stringify({ prompt: aiPrompt, max_tokens: 300 });
+    const res = await fetch('/api/claude', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: body
+    });
+    if(!res.ok) throw new Error('http ' + res.status);
+    const data = await res.json();
+    const txt = data.content.filter(b=>b.type==='text').map(b=>b.text).join('');
+    /* extract JSON robustly */
+    const m = txt.match(/\{[^{}]+\}/);
+    if(!m) throw new Error('no json');
+    const p = JSON.parse(m[0]);
+    const aiEmo = p.emotion || p.e || '';
+    const aiIdx = parseInt(p.index ?? p.poemIndex ?? p.i ?? -1);
+    /* only apply AI result if it makes sense */
+    if(['miss','hope','regret','joy'].includes(aiEmo) && aiIdx >= 0 && aiIdx < POEMS.length){
+      S.emotion = aiEmo;
+      S.poem    = POEMS[aiIdx];
+      renderEmo(p.reason || p.r || '', true);
+    }
+  } catch(e) {
+    /* AI failed — local result already shown, nothing to do */
+    console.log('AI refine skipped:', e.message);
+  }
+}
+
+/* ── Local multi-dimensional emotion scorer ──
+   Scores each emotion on 6 dimensions:
+   keywords, sentence-end particles, punctuation signals,
+   semantic field, implicit sentiment, topic category.
+   Then picks the top-scoring poem from matching category.
+*/
+function localScore(w) {
+  const text = w.replace(/\s/g,'');
+
+  /* ── dimension weights ── */
+  const scores = { miss:0, hope:0, regret:0, joy:0 };
+
+  /* 1. Keyword banks with weights */
+  const kw = {
+    miss: [
+      [4, /想你|想他|想她|想家|思念|牵挂|念你|念家|思你/],
+      [3, /离别|分离|远方|异乡|他乡|漂泊|一个人|孤独|孤单|寂寞/],
+      [3, /还记得|曾经|以前|那时候|回忆|往事|从前|过去/],
+      [2, /等你|等他|盼|归|何时|几时|不见|久违|多久/],
+      [2, /在哪|在哪里|还好吗|你好吗|安好|平安/],
+      [1, /夜|月|梦|远|路|归途|故乡|家乡/],
+    ],
+    hope: [
+      [4, /希望|梦想|相信|一定|必定|总会|会好的|加油|努力|坚持/],
+      [3, /期待|期望|盼望|向往|渴望|憧憬|未来|明天|前途/],
+      [3, /祝|愿|祈|愿望|心愿|愿你|愿我|祝你|保佑/],
+      [2, /成功|实现|达到|完成|突破|进步|成长|蜕变/],
+      [2, /勇敢|无惧|不怕|迎接|挑战|出发|开始|新的/],
+      [1, /光|春|暖|晴|阳光|花开|破茧|彩虹/],
+    ],
+    regret: [
+      [4, /遗憾|后悔|悔|可惜|惋惜|来不及|太晚了|错过|失去/],
+      [4, /难过|伤心|心痛|心碎|痛苦|煎熬|难熬|折磨/],
+      [3, /无奈|没办法|算了|随它|认命|妥协|放弃|无力/],
+      [3, /愁|忧|苦|哀|悲|哭|泪|叹|失落|落空/],
+      [3, /如果|要是|假如|当初|早知道|那就好了|就好了/],
+      [2, /不该|不应该|怎么|为什么|凭什么|何必|何苦/],
+      [2, /疲惫|累了|撑不住|撑不下去|扛不住|太累|太苦/],
+      [1, /秋|冬|雨|风|凉|冷|暗|沉|重|黑夜/],
+    ],
+    joy: [
+      [4, /开心|快乐|幸福|喜悦|高兴|欢乐|欣喜|雀跃|兴奋/],
+      [3, /满足|知足|感恩|感谢|谢谢|感激|幸运|幸好|庆幸/],
+      [3, /成功了|做到了|终于|太好了|真好|好极了|棒|太棒了/],
+      [2, /哈哈|哈|嘻嘻|笑|乐|爽|舒服|惬意|自在|轻松/],
+      [2, /爱|喜欢|心动|美好|甜|甜蜜|温暖|温馨|治愈/],
+      [1, /春|夏|阳|光|花|彩|暖|亮|明|香/],
+    ],
+  };
+  for(const [emo, pairs] of Object.entries(kw)){
+    for(const [w2, re] of pairs){
+      if(re.test(text)) scores[emo] += w2;
+    }
+  }
+
+  /* 2. Sentence-ending particles — strong signals */
+  const particles = {
+    miss:   /[啊呀唉哎]$|[。！]$/,
+    hope:   /[！吧呢]$|加油[！。]?$/,
+    regret: /[唉哎嗯]|算了|罢了|而已|就这样/,
+    joy:    /[哈哈哈！]{2,}|[开心幸福快乐]/,
+  };
+  for(const [emo, re] of Object.entries(particles)){
+    if(re.test(text)) scores[emo] += 2;
+  }
+
+  /* 3. Punctuation & length signals */
+  if(/？|\?/.test(text))   scores.miss += 1.5;  /* questions often = longing */
+  if(/！{2,}|!{2,}/.test(text)) scores.joy += 2; /* multiple ! = excitement */
+  if(text.length <= 4)     scores.miss += 1;   /* very short = concentrated feeling */
+  if(text.length >= 20)    scores.hope += 0.5; /* longer = explaining/planning */
+
+  /* 4. Topic category via semantic clusters */
+  const topics = {
+    relationship: /男友|女友|男朋友|女朋友|恋人|爱人|他|她|对象|喜欢的人|爱的人|前任|暗恋/,
+    family:       /妈妈|爸爸|父母|家人|奶奶|爷爷|孩子|宝宝|兄弟|姐妹|亲人|家/,
+    career:       /工作|职场|升职|考试|考研|面试|项目|deadline|加班|事业|目标/,
+    travel:       /旅行|出发|异乡|城市|漂泊|归家|回家|路上|远行/,
+    nature:       /海|山|风|花|月|星|雨|云|树|田/,
+    time:         /岁月|时光|年华|年龄|老了|青春|少年|儿时|小时候/,
+  };
+  if(topics.relationship.test(text)){
+    /* relationship + no explicit joy keyword → likely miss or regret */
+    if(scores.joy < 3){ scores.miss += 2; scores.regret += 1; }
+  }
+  if(topics.family.test(text))  scores.miss += 2;
+  if(topics.career.test(text))  { scores.hope += 1.5; scores.regret += 1; }
+  if(topics.travel.test(text))  scores.miss += 2;
+  if(topics.time.test(text))    { scores.miss += 1; scores.regret += 1.5; }
+
+  /* 5. Implicit negation boosts regret */
+  if(/不|没|无|难|苦|哭|痛|累/.test(text) && scores.joy < 2) scores.regret += 1.5;
+
+  /* 6. Resolve tie — pick highest, with min threshold */
+  let best = 'hope'; /* default to hope as neutral positive, not miss */
+  let bestScore = -1;
+  for(const [emo, sc] of Object.entries(scores)){
+    if(sc > bestScore){ bestScore = sc; best = emo; }
+  }
+  /* if all scores are 0 (unrecognized text), use topic hints or hope */
+  if(bestScore === 0){
+    /* Check for generic positive/neutral expressions */
+    if(/还好|一般|还行|凑合|不错|挺好|平安|平淡/.test(text)) best = 'hope';
+    else if(/哎|唉|哦|嗯/.test(text)) best = 'regret';
+    else best = 'hope'; /* neutral default = hope, not miss */
+  }
+
+  /* 7. Pick the best matching poem within the emotion category
+     Secondary sort: keyword overlap with user text */
+  const candidates = POEMS.filter(p => p.e === best);
+  let bestPoem = candidates[0] || POEMS[0];
+  let bestOverlap = -1;
+  for(const p of candidates){
+    /* count shared single characters */
+    let overlap = 0;
+    for(const ch of text){
+      if(ch.length && p.t.includes(ch) && ch.match(/[\u4e00-\u9fff]/)) overlap++;
+    }
+    /* bonus for semantic similarity keywords in poem */
+    const poemKwBonus = {
+      miss:   /相|见|归|离|别|思|念|远|千里|梦/,
+      hope:   /志|义|香|勇|心安|万年|丹心/,
+      regret: /愁|恨|凄|哀|悲|泪|苦/,
+      joy:    /春|乐|美|好|安/,
+    };
+    if(poemKwBonus[best] && poemKwBonus[best].test(p.t)) overlap += 2;
+    if(overlap > bestOverlap){ bestOverlap = overlap; bestPoem = p; }
+  }
+
+  /* Build reason string */
+  const reasons = {
+    miss:   '你的话里藏着深深的牵挂',
+    hope:   '字里行间透着对未来的期许',
+    regret: '感受到了一丝无法言说的遗憾',
+    joy:    '你的喜悦隐藏不住',
+  };
+  return { emotion: best, poem: bestPoem, reason: reasons[best] };
+}
+
+function renderEmo(reason, isAI){
+  const ei = EMO[S.emotion] || EMO.miss;
+  const badge = document.getElementById('ebdg');
+  badge.innerHTML = '<span class="ebadge ' + ei.cls + '">' + ei.label + (isAI ? ' · AI精析' : '') + '</span>';
+  const pe = document.getElementById('mpem');
+  pe.textContent = '';
+  S.poem.t.split('').forEach((c,i) => setTimeout(()=>{ pe.textContent += c; }, i*72));
+  document.getElementById('msrc').textContent = '—— ' + S.poem.s + (reason ? ' | ' + reason : '');
+  document.getElementById('er').classList.add('show');
+}
+
+
+/* ═══════════════ STAGE 2 ═══════════════ */
+function initS2(){
+  if(S.word){document.getElementById('ct').textContent=S.word;document.getElementById('ct').style.opacity='1';}
+  if(S.poem)document.getElementById('cu').textContent=S.poem.t;
+  drawV();
+}
+function stab(name){
+  document.querySelectorAll('.ctab').forEach((t,i)=>{const names=['shape','size','glaze','pattern'];t.classList.toggle('active',names[i]===name);});
+  document.querySelectorAll('.cpanel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('tp-'+name).classList.add('active');
+}
+function setShape(s){
+  S.shape=s;
+  document.querySelectorAll('.shbtn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sh-'+s).classList.add('active'); drawV();
+}
+function setGlaze(name,c,d,label){
+  S.gc=c;S.gd=d;S.gn=label;
+  document.querySelectorAll('.sw').forEach(sw=>sw.classList.remove('active'));
+  document.getElementById('sw-'+name).classList.add('active'); drawV();
+}
+function setPat(p){
+  S.pattern=p;
+  document.querySelectorAll('.ptbtn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('pt-'+p).classList.add('active'); drawV();
+}
+function uv(){
+  V.h=+document.getElementById('vh').value; document.getElementById('vh-v').textContent=V.h;
+  V.b=+document.getElementById('vb').value; document.getElementById('vb-v').textContent=V.b;
+  V.m=+document.getElementById('vm').value; document.getElementById('vm-v').textContent=V.m;
+  V.f=+document.getElementById('vf').value; document.getElementById('vf-v').textContent=V.f;
+  V.gl=+document.getElementById('vgl').value; document.getElementById('vgl-v').textContent=V.gl;
+  V.pd=+document.getElementById('vpd').value; document.getElementById('vpd-v').textContent=V.pd;
+  drawV();
+}
+
+function drawV(cvId,w,h){
+  const cv=document.getElementById(cvId||'vc');
+  const ctx=cv.getContext('2d');
+  const W=w||cv.width, H=h||cv.height;
+  ctx.clearRect(0,0,W,H);
+  const cx=W/2, sc=H/130;
+  const totalH=V.h*sc, top=(H-totalH)/2, bot=top+totalH;
+  let mW,bW,fW;
+  switch(S.shape){
+    case'bowl': mW=V.m*sc*.92;bW=V.b*sc*.82;fW=V.f*sc*.38; break;
+    case'jar':  mW=V.m*sc*.48;bW=V.b*sc*.88;fW=V.f*sc*.56; break;
+    case'vase': mW=V.m*sc*.38;bW=V.b*sc*.72;fW=V.f*sc*.36; break;
+    case'cup':  mW=V.m*sc*.62;bW=V.b*sc*.48;fW=V.f*sc*.33; break;
+    default:    mW=V.m*sc*.54;bW=V.b*sc*.76;fW=V.f*sc*.44;
+  }
+  ctx.beginPath();
+  if(S.shape==='bowl'){
+    ctx.moveTo(cx-mW,top+6); ctx.bezierCurveTo(cx-mW*.86,top+totalH*.32,cx-bW,top+totalH*.72,cx-fW,bot);
+    ctx.lineTo(cx+fW,bot); ctx.bezierCurveTo(cx+bW,top+totalH*.72,cx+mW*.86,top+totalH*.32,cx+mW,top+6);
+  } else {
+    ctx.moveTo(cx-mW,top+4); ctx.bezierCurveTo(cx-mW*.78,top+totalH*.2,cx-bW,top+totalH*.44,cx-bW,top+totalH*.56);
+    ctx.bezierCurveTo(cx-bW*.88,top+totalH*.78,cx-fW*1.14,bot-4,cx-fW,bot);
+    ctx.lineTo(cx+fW,bot); ctx.bezierCurveTo(cx+fW*1.14,bot-4,cx+bW*.88,top+totalH*.78,cx+bW,top+totalH*.56);
+    ctx.bezierCurveTo(cx+bW,top+totalH*.44,cx+mW*.78,top+totalH*.2,cx+mW,top+4);
+  }
+  ctx.closePath();
+  const gloss=V.gl/100;
+  const gr=ctx.createLinearGradient(cx-bW,0,cx+bW,0);
+  gr.addColorStop(0,hA(S.gc,.52+gloss*.18)); gr.addColorStop(.22,hA(S.gc,.76+gloss*.14));
+  gr.addColorStop(.46,hA(S.gd,.92)); gr.addColorStop(.62,hA(S.gc,.8)); gr.addColorStop(1,hA(S.gc,.48+gloss*.18));
+  ctx.fillStyle=gr; ctx.fill();
+  ctx.strokeStyle=hA(S.gc,.58); ctx.lineWidth=1; ctx.stroke();
+  if(gloss>.18){
+    ctx.beginPath(); ctx.moveTo(cx-mW*.52,top+5);
+    ctx.bezierCurveTo(cx-mW*.44,top+totalH*.16,cx-bW*.52,top+totalH*.4,cx-bW*.46,top+totalH*.5);
+    ctx.strokeStyle=`rgba(255,248,235,${gloss*.17})`; ctx.lineWidth=4; ctx.stroke();
+  }
+  /* draw patterns clipped to vessel silhouette */
+  ctx.save();
+  ctx.beginPath();
+  if(S.shape==='bowl'){
+    ctx.moveTo(cx-mW,top+6); ctx.bezierCurveTo(cx-mW*.86,top+totalH*.32,cx-bW,top+totalH*.72,cx-fW,bot);
+    ctx.lineTo(cx+fW,bot); ctx.bezierCurveTo(cx+bW,top+totalH*.72,cx+mW*.86,top+totalH*.32,cx+mW,top+6);
+  } else {
+    ctx.moveTo(cx-mW,top+4); ctx.bezierCurveTo(cx-mW*.78,top+totalH*.2,cx-bW,top+totalH*.44,cx-bW,top+totalH*.56);
+    ctx.bezierCurveTo(cx-bW*.88,top+totalH*.78,cx-fW*1.14,bot-4,cx-fW,bot);
+    ctx.lineTo(cx+fW,bot); ctx.bezierCurveTo(cx+fW*1.14,bot-4,cx+bW*.88,top+totalH*.78,cx+bW,top+totalH*.56);
+    ctx.bezierCurveTo(cx+bW,top+totalH*.44,cx+mW*.78,top+totalH*.2,cx+mW,top+4);
+  }
+  ctx.closePath();
+  ctx.clip();
+  drawPat(ctx,cx,top,bot,totalH,bW,mW);
+  ctx.restore();
+  /* lip */
+  ctx.beginPath(); ctx.ellipse(cx,top+4,mW,mW*.17,0,0,Math.PI*2);
+  ctx.strokeStyle=hA(S.gc,.68); ctx.lineWidth=.8; ctx.stroke();
+  /* foot */
+  ctx.beginPath(); ctx.ellipse(cx,bot-1,fW,fW*.14,0,0,Math.PI*2);
+  ctx.strokeStyle=hA(S.gd,.48); ctx.lineWidth=.7; ctx.stroke();
+  /* spout+handle for ewer */
+  if(S.shape==='ewer'){
+    ctx.beginPath(); ctx.moveTo(cx+mW,top+totalH*.22);
+    ctx.bezierCurveTo(cx+mW+20*sc,top+totalH*.12,cx+mW+28*sc,top+totalH*.06,cx+mW+18*sc,top);
+    ctx.strokeStyle=hA(S.gc,.68); ctx.lineWidth=6; ctx.stroke();
+    ctx.strokeStyle=hA(S.gd,.38); ctx.lineWidth=1; ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(cx-mW,top+totalH*.16);
+    ctx.bezierCurveTo(cx-mW-26*sc,top+totalH*.22,cx-mW-26*sc,top+totalH*.56,cx-mW,top+totalH*.66);
+    ctx.strokeStyle=hA(S.gc,.58); ctx.lineWidth=5; ctx.stroke();
+  }
+}
+
+function drawPat(ctx,cx,top,bot,totalH,bW,mW){
+  /* All coords are vessel-relative. bW = half-width at belly, totalH = full height.
+     Since clip is active, anything outside silhouette is auto-hidden. */
+  const dens=V.pd/100;
+  const isDark=(S.gc==='#7aaa8e'||S.gc==='#2d5a7a'||S.gc==='#8a2b2b'||S.gc==='#8b5e3c');
+  const base=isDark?'255,240,200':'40,18,4';
+  const alpha=0.48+dens*0.32;
+  const pa=`rgba(${base},${alpha})`;
+  const pa2=`rgba(${base},${alpha*0.6})`;
+  ctx.lineCap='round'; ctx.lineJoin='round';
+
+  /* vessel body bounds */
+  const bodyTop=top+totalH*0.08;
+  const bodyBot=bot-totalH*0.06;
+  const bodyH=bodyBot-bodyTop;
+  const hw=bW*0.72; /* safe half-width inside vessel */
+
+  switch(S.pattern){
+
+    case'poem':{
+      /* two vertical calligraphy columns, centered on vessel */
+      const word=(S.word||'诗瓷共生').slice(0,7);
+      const poem=S.poem?S.poem.t.slice(0,7):'';
+      const fs=Math.max(10, Math.min(16, Math.round(bodyH/(word.length+1))));
+      ctx.font=`${fs}px 'Ma Shan Zheng','KaiTi',cursive`;
+      ctx.textAlign='center';
+      /* col1: user word — left of center */
+      ctx.fillStyle=pa;
+      word.split('').forEach((c,i)=>{
+        ctx.fillText(c, cx-hw*0.35, bodyTop+fs*0.9+i*(fs+2));
+      });
+      /* col2: ancient poem — right of center, lighter */
+      ctx.fillStyle=pa2;
+      ctx.font=`${Math.max(9,fs-2)}px 'Ma Shan Zheng','KaiTi',cursive`;
+      poem.split('').forEach((c,i)=>{
+        ctx.fillText(c, cx+hw*0.35, bodyTop+fs*0.9+i*(fs+1));
+      });
+      break;
+    }
+
+    case'cloud':{
+      /* auspicious ruyi-cloud repeat inside vessel */
+      const cols=2, rows=Math.round(2+dens*2);
+      const cellW=(hw*2)/cols, cellH=bodyH/rows;
+      ctx.strokeStyle=pa; ctx.lineWidth=1.1;
+      for(let r=0;r<rows;r++){
+        for(let c=0;c<cols;c++){
+          const ox=cx-hw+cellW*(c+0.5)+(r%2)*cellW*0.5;
+          const oy=bodyTop+cellH*(r+0.4);
+          const cr=Math.min(cellW,cellH)*0.22;
+          /* ruyi head: central arc + two wing arcs */
+          ctx.beginPath();
+          ctx.arc(ox, oy, cr, Math.PI, 0, false);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(ox-cr, oy, cr*0.55, 0, Math.PI, false);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(ox+cr, oy, cr*0.55, 0, Math.PI, false);
+          ctx.stroke();
+          /* stem */
+          ctx.beginPath();
+          ctx.moveTo(ox, oy+cr);
+          ctx.lineTo(ox, oy+cr*1.8);
+          ctx.stroke();
+        }
+      }
+      break;
+    }
+
+    case'fish':{
+      /* carp motif: 2 columns of fish swimming up */
+      const rows=Math.round(1+dens*2.5);
+      ctx.lineWidth=1.1;
+      for(let i=0;i<rows;i++){
+        const side=i%2===0?-1:1;
+        const fx=cx+side*hw*0.3;
+        const fy=bodyTop+bodyH*(0.15+i*(0.7/rows));
+        const fw=hw*0.38, fh=hw*0.14;
+        /* body */
+        ctx.beginPath();
+        ctx.ellipse(fx, fy, fw, fh, side*0.18, 0, Math.PI*2);
+        ctx.strokeStyle=pa; ctx.stroke();
+        /* tail fin */
+        const tx=fx+side*fw;
+        ctx.beginPath();
+        ctx.moveTo(tx, fy);
+        ctx.bezierCurveTo(tx+side*fw*0.4,fy-fh*1.2, tx+side*fw*0.4,fy+fh*1.2, tx,fy);
+        ctx.fillStyle=pa2; ctx.fill();
+        /* eye */
+        ctx.beginPath();
+        ctx.arc(fx-side*fw*0.55, fy-fh*0.2, fh*0.25, 0, Math.PI*2);
+        ctx.fillStyle=pa; ctx.fill();
+        /* 3 scale arcs */
+        for(let s=0;s<3;s++){
+          const sx=fx-side*fw*(0.1+s*0.18);
+          ctx.beginPath();
+          ctx.arc(sx, fy, fh*(0.5+s*0.1), side>0?0:Math.PI, side>0?Math.PI:0, false);
+          ctx.strokeStyle=pa2; ctx.lineWidth=0.7; ctx.stroke();
+        }
+        ctx.lineWidth=1.1;
+      }
+      break;
+    }
+
+    case'lotus':{
+      /* lotus flowers: 1 large + repeating small */
+      const count=Math.round(1+dens*1.8);
+      const cellH2=bodyH/count;
+      for(let i=0;i<count;i++){
+        const lx=cx+(i%2===0?-hw*0.2:hw*0.2);
+        const ly=bodyTop+cellH2*(i+0.4);
+        const lr=Math.min(hw*0.38, cellH2*0.35);
+        const petals=8;
+        /* petals */
+        for(let p=0;p<petals;p++){
+          const angle=(p/petals)*Math.PI*2;
+          const px=lx+Math.cos(angle)*lr;
+          const py=ly+Math.sin(angle)*lr;
+          ctx.beginPath();
+          ctx.moveTo(lx, ly);
+          ctx.bezierCurveTo(
+            lx+Math.cos(angle-0.35)*lr*0.55, ly+Math.sin(angle-0.35)*lr*0.55,
+            lx+Math.cos(angle+0.35)*lr*0.55, ly+Math.sin(angle+0.35)*lr*0.55,
+            px, py
+          );
+          ctx.strokeStyle=pa; ctx.lineWidth=1.0; ctx.stroke();
+        }
+        /* center */
+        ctx.beginPath(); ctx.arc(lx,ly,lr*0.2,0,Math.PI*2);
+        ctx.fillStyle=pa2; ctx.fill();
+        /* stem + leaf */
+        if(ly+lr+cellH2*0.4<bodyBot){
+          ctx.beginPath();
+          ctx.moveTo(lx,ly+lr); ctx.lineTo(lx,ly+lr+cellH2*0.35);
+          ctx.strokeStyle=pa2; ctx.lineWidth=1.0; ctx.stroke();
+          ctx.beginPath();
+          ctx.ellipse(lx+hw*0.15,ly+lr+cellH2*0.22, hw*0.14,hw*0.07,-0.4,0,Math.PI*2);
+          ctx.strokeStyle=pa2; ctx.lineWidth=0.8; ctx.stroke();
+        }
+      }
+      break;
+    }
+
+    case'geo':{
+      /* Tang diamond lattice — strictly inside vessel bounds */
+      const unit=Math.round(hw*0.38+dens*hw*0.18);
+      ctx.strokeStyle=pa; ctx.lineWidth=0.9;
+      /* horizontal bands */
+      const rows=Math.floor(bodyH/unit)+1;
+      const cols=Math.floor((hw*2)/unit)+2;
+      for(let r=0;r<=rows;r++){
+        const y=bodyTop+r*unit;
+        /* offset every other row by half unit for diamond effect */
+        const off=(r%2)*unit*0.5;
+        ctx.beginPath();
+        ctx.moveTo(cx-hw, y); ctx.lineTo(cx+hw, y);
+        ctx.strokeStyle=pa2; ctx.lineWidth=0.55; ctx.stroke();
+        /* diagonal lines from each grid point */
+        for(let c=-cols;c<=cols;c++){
+          const x=cx-hw+off+c*unit;
+          /* diagonal down-right */
+          ctx.beginPath();
+          ctx.moveTo(x,y); ctx.lineTo(x+unit,y+unit);
+          ctx.strokeStyle=pa2; ctx.lineWidth=0.55; ctx.stroke();
+          /* diagonal down-left */
+          ctx.beginPath();
+          ctx.moveTo(x,y); ctx.lineTo(x-unit,y+unit);
+          ctx.strokeStyle=pa2; ctx.lineWidth=0.55; ctx.stroke();
+          /* diamond center dot */
+          ctx.beginPath(); ctx.arc(x,y,1.5,0,Math.PI*2);
+          ctx.fillStyle=pa; ctx.fill();
+        }
+      }
+      break;
+    }
+
+    default:
+      /* 素面 — subtle glaze drip line */
+      ctx.beginPath();
+      ctx.moveTo(cx+hw*0.15, bodyTop);
+      ctx.bezierCurveTo(cx+hw*0.2,bodyTop+bodyH*0.35, cx+hw*0.1,bodyTop+bodyH*0.6, cx+hw*0.18,bodyTop+bodyH*0.8);
+      ctx.strokeStyle=`rgba(${base},${alpha*0.28})`; ctx.lineWidth=3.5; ctx.stroke();
+      break;
+  }
+}
+
+function hA(hex,a){
+  const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+async function genCalli(){
+  if(!S.word){alert('请先完成第一阶——输入你的心声');return;}
+  const btn=document.getElementById('gbtn'); btn.disabled=true;
+  showLoad('AI 正在以褐彩书写……');
+  try{
+    const poem=S.poem?S.poem.t:'君生我未生，我生君已老。';
+    const prompt=`你是一位精通长沙窑书法和唐代诗歌的专家。
+今人写下："${S.word}"
+长沙窑古诗："${poem}"
+用35字以内，描述这两句话的情感如何跨越千年相互呼应。语言要有古典气息，简洁有力。直接给描述，无需前缀。`;
+    const insight=await apiCall(prompt,120);
+    S.insight=insight.trim();
+    document.getElementById('ct').textContent=S.word; document.getElementById('ct').style.opacity='1';
+    document.getElementById('cu').textContent=poem;
+    document.getElementById('anote').textContent='「 '+S.insight+' 」';
+    document.getElementById('anote').classList.add('show');
+    document.getElementById('to3').classList.add('show');
+    drawV(); hideLoad();
+  }catch(e){
+    hideLoad(); btn.disabled=false;
+    S.insight='一言落笔成釉，千年相遇于瓷。';
+    document.getElementById('anote').textContent='「 '+S.insight+' 」';
+    document.getElementById('anote').classList.add('show');
+    document.getElementById('to3').classList.add('show');
+  }
+}
+
+/* ═══════════════ STAGE 3 — KILN ═══════════════ */
+let kPhase='idle', kRAF=null;
+
+function initS3(){
+  kPhase='idle'; S.firing=false;
+  if(kRAF){cancelAnimationFrame(kRAF);kRAF=null;}
+  drawKiln(0,0);
+  document.getElementById('fbtn').disabled=false;
+  document.getElementById('svbtn').classList.remove('show');
+  document.getElementById('acard').classList.remove('show');
+  document.getElementById('kstat').textContent='虚拟柴窑，等待你的瓷器入窑烧制';
+}
+
+function drawKiln(t,intensity){
+  const cv=document.getElementById('kc'), ctx=cv.getContext('2d');
+  const W=cv.width, H=cv.height;
+  ctx.clearRect(0,0,W,H);
+  /* heat background */
+  if(intensity>0){
+    const bg=ctx.createRadialGradient(W/2,H,10,W/2,H*.38,H*.75);
+    bg.addColorStop(0,`rgba(200,60,0,${intensity*.38})`);
+    bg.addColorStop(.5,`rgba(110,28,0,${intensity*.16})`);
+    bg.addColorStop(1,'transparent');
+    ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+  }
+  /* ground */
+  ctx.fillStyle='#0e0700'; ctx.fillRect(0,H-28,W,28);
+  ctx.strokeStyle='rgba(200,168,130,.1)'; ctx.lineWidth=.5;
+  ctx.beginPath(); ctx.moveTo(0,H-28); ctx.lineTo(W,H-28); ctx.stroke();
+  /* kiln main body */
+  const kx=80,ky=55,kw=620,kh=280;
+  ctx.beginPath(); ctx.moveTo(kx,H-28); ctx.lineTo(kx,ky+75);
+  ctx.bezierCurveTo(kx,ky-18,kx+kw,ky-18,kx+kw,ky+75);
+  ctx.lineTo(kx+kw,H-28); ctx.closePath();
+  const kgr=ctx.createLinearGradient(kx,ky,kx+kw,H-28);
+  kgr.addColorStop(0,'#1c0f05');
+  kgr.addColorStop(.5,intensity>.28?`rgba(${Math.round(45+intensity*75)},${Math.round(18+intensity*18)},0,.92)`:'#130a03');
+  kgr.addColorStop(1,'#0e0700');
+  ctx.fillStyle=kgr; ctx.fill();
+  ctx.strokeStyle='rgba(200,168,130,.18)'; ctx.lineWidth=1; ctx.stroke();
+  /* brick rows */
+  ctx.strokeStyle='rgba(200,168,130,.06)'; ctx.lineWidth=.5;
+  for(let row=0;row<10;row++){
+    const y=ky+75+row*21; if(y>H-28)break;
+    const off=(row%2)===0?0:21;
+    for(let col=0;col<15;col++){ctx.strokeRect(kx+col*42+off,y,42,21);}
+  }
+  /* chimney pair */
+  [[kx+100,ky-28],[kx+kw-100,ky-28]].forEach(([cx2,cy])=>{
+    ctx.fillStyle='#1a0d05'; ctx.fillRect(cx2-13,cy,26,65);
+    ctx.strokeStyle='rgba(200,168,130,.18)'; ctx.strokeRect(cx2-13,cy,26,65);
+    if(intensity>0){
+      for(let s=0;s<6;s++){
+        const pct=((t*.6+s*18)%90)/90;
+        const sy=cy-pct*70; const sx=cx2+Math.sin(t*.04+s)*7; const pr=8+s*2.5;
+        ctx.beginPath(); ctx.arc(sx,sy,pr,0,Math.PI*2);
+        ctx.fillStyle=`rgba(70,52,32,${.18*intensity*(1-pct)})`;
+        ctx.fill();
+      }
+    }
+  });
+  /* kiln door arch */
+  const dx=W/2-75, dy=ky+88, dw=150, dh=165;
+  ctx.beginPath(); ctx.moveTo(dx,dy+dh); ctx.lineTo(dx,dy+28);
+  ctx.bezierCurveTo(dx,dy-12,dx+dw,dy-12,dx+dw,dy+28); ctx.lineTo(dx+dw,dy+dh); ctx.closePath();
+  const dc=intensity>0
+    ?`rgba(${Math.round(170+intensity*72)},${Math.round(intensity*95)},0,${.48+intensity*.42})`
+    :'#080503';
+  ctx.fillStyle=dc; ctx.fill();
+  ctx.strokeStyle='rgba(200,168,130,.22)'; ctx.lineWidth=1.5; ctx.stroke();
+  if(intensity>0){
+    const dg=ctx.createRadialGradient(dx+dw/2,dy+dh/2,4,dx+dw/2,dy+dh/2,88);
+    dg.addColorStop(0,`rgba(255,${Math.round(95+intensity*105)},0,${intensity*.85})`);
+    dg.addColorStop(.55,`rgba(190,55,0,${intensity*.3})`); dg.addColorStop(1,'transparent');
+    ctx.save(); ctx.clip();
+    ctx.beginPath(); ctx.moveTo(dx,dy+dh); ctx.lineTo(dx,dy+28);
+    ctx.bezierCurveTo(dx,dy-12,dx+dw,dy-12,dx+dw,dy+28); ctx.lineTo(dx+dw,dy+dh); ctx.closePath();
+    ctx.fillStyle=dg; ctx.fill(); ctx.restore();
+  }
+  if(intensity===0){
+    ctx.fillStyle='rgba(200,168,130,.22)'; ctx.font="14px 'Noto Sans SC',sans-serif";
+    ctx.textAlign='center'; ctx.fillText('窑  门',dx+dw/2,dy+dh/2+5);
+  }
+  /* fire particles at base of door */
+  if(intensity>0){
+    for(let fi=0;fi<Math.round(intensity*35);fi++){
+      const fx=dx+10+Math.random()*130;
+      const fy=dy+dh-Math.random()*intensity*dh*.85;
+      const fr=1.5+Math.random()*4;
+      const frac=1-fy/(dy+dh);
+      ctx.beginPath(); ctx.arc(fx,fy,fr,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,${Math.round(60+frac*160)},0,${(.3+frac*.5)*intensity})`;
+      ctx.fill();
+    }
+    /* floating ember sparks */
+    for(let si=0;si<Math.round(intensity*12);si++){
+      const sx=dx+Math.random()*dw, sy=dy+Math.random()*dh*.6;
+      ctx.beginPath(); ctx.arc(sx+(Math.sin(t*.08+si)*3),sy,1,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,220,80,${Math.random()*.7*intensity})`;
+      ctx.fill();
+    }
+  }
+  /* vessel inside kiln */
+  if(intensity>0){
+    const vx=dx+dw/2, vy=dy+dh-52;
+    const phase=Math.min(t/280,1);
+    const vr=Math.round(95+intensity*152), vg=Math.round(intensity*78), vb=0;
+    ctx.save();
+    ctx.beginPath(); ctx.moveTo(vx-20,vy-52);
+    ctx.bezierCurveTo(vx-18,vy-32,vx-24,vy-16,vx-24,vy-6);
+    ctx.bezierCurveTo(vx-24,vy+4,vx-15,vy+10,vx,vy+10);
+    ctx.bezierCurveTo(vx+15,vy+10,vx+24,vy+4,vx+24,vy-6);
+    ctx.bezierCurveTo(vx+24,vy-16,vx+18,vy-32,vx+20,vy-52); ctx.closePath();
+    ctx.fillStyle=`rgba(${vr},${vg},${vb},.88)`; ctx.fill();
+    ctx.strokeStyle=`rgba(255,${Math.round(175+phase*55)},0,.65)`; ctx.lineWidth=1; ctx.stroke();
+    /* halo glow */
+    const vgr=ctx.createRadialGradient(vx,vy-22,2,vx,vy-22,38);
+    vgr.addColorStop(0,`rgba(255,${Math.round(145+phase*85)},0,${phase*.68})`);
+    vgr.addColorStop(1,'transparent');
+    ctx.fillStyle=vgr; ctx.fillRect(vx-48,vy-68,96,90);
+    /* poem chars glowing on vessel */
+    if(phase>.38&&S.poem){
+      const ca=Math.min((phase-.38)/.42,1)*.92;
+      ctx.fillStyle=`rgba(255,245,200,${ca})`;
+      ctx.font="8.5px 'Ma Shan Zheng',cursive"; ctx.textAlign='center';
+      S.poem.t.split('').slice(0,5).forEach((c,i)=>ctx.fillText(c,vx,vy-46+i*10));
+    }
+    ctx.restore();
+  }
+  /* log pile at base */
+  const logY=H-28;
+  [[kx+130,logY],[kx+175,logY-5],[kx+220,logY-2],[kx+kw-130,logY],[kx+kw-175,logY-4],[kx+kw-220,logY-3]].forEach(([lx,ly])=>{
+    ctx.fillStyle='#3d2010'; ctx.beginPath(); ctx.ellipse(lx,ly,14,5,-.1,0,Math.PI*2); ctx.fill();
+    ctx.strokeStyle='rgba(200,168,130,.12)'; ctx.stroke();
+    if(intensity>.2){
+      ctx.beginPath(); ctx.arc(lx+Math.random()*6-3,ly-5-Math.random()*10,2,0,Math.PI*2);
+      ctx.fillStyle=`rgba(255,${Math.round(100+Math.random()*100)},0,${intensity*.6})`; ctx.fill();
+    }
+  });
+}
+
+function startFire(){
+  if(kPhase==='firing')return;
+  kPhase='firing'; document.getElementById('fbtn').disabled=true;
+  sndDoor(); setTimeout(()=>sndCrackle(8000),600);
+  const statEl=document.getElementById('kstat');
+  const msgs=[[0,'窑门缓缓开启……炭火点燃'],[60,'窑温升至六百度，陶土开始变色'],[140,'八百度——釉药开始软化流淌'],[210,'千度高温，诗句在釉下浮现'],[300,'火候正佳，两句诗在釉里交融'],[390,'窑火渐息，静待冷却'],[460,'开窑——千年之诗，此刻永恒']];
+  let t=0;
+  function anim(){
+    t++;
+    const intensity=Math.min(t/185,1)*Math.sin(Math.min(t/450,1)*Math.PI);
+    drawKiln(t,intensity);
+    if(t===30)sndSizzle();
+    if(t===130)sndCrackle(5000);
+    if(t===240)sndSizzle();
+    if(t===320)sndCrackle(4000);
+    for(const[tick,msg]of msgs){if(t===tick)statEl.textContent=msg;}
+    if(t<520){kRAF=requestAnimationFrame(anim);}
+    else{kPhase='done';S.firing=true;sndComplete();drawKiln(520,0);showArt();}
+  }
+  anim();
+}
+
+async function showArt(){
+  document.getElementById('kstat').textContent='烧制完成 · 你的诗瓷已永恒';
+  document.getElementById('svbtn').classList.add('show');
+  document.getElementById('ar-word').textContent=S.word||'（未填写）';
+  const ei=EMO[S.emotion]; document.getElementById('ar-emo').textContent=ei?ei.label:'思念';
+  document.getElementById('ar-poem').textContent=S.poem?S.poem.t:'';
+  const shNames={ewer:'执壶',bowl:'碗盏',jar:'罐坛',vase:'花瓶',cup:'酒杯'};
+  const ptNames={poem:'诗文纹',cloud:'云纹',fish:'鱼纹',lotus:'莲纹',geo:'几何纹',none:'素面'};
+  document.getElementById('ar-vessel').textContent=`${S.gn}·${shNames[S.shape]||'执壶'}·${ptNames[S.pattern]||'诗文纹'}`;
+  /* draw vessel thumbnail in artifact */
+  const artCv=document.getElementById('artvc');
+  drawV('artvc',180,220);
+  /* poem interpretation — from data or AI */
+  let interp=S.poem?S.poem.i:'', modern=S.poem?S.poem.m:'';
+  document.getElementById('pi-interp').textContent=interp;
+  document.getElementById('pi-modern').textContent='今日寄寓：'+modern;
+  const certId='CSK-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,6).toUpperCase();
+  document.getElementById('acid').textContent=certId;
+  document.getElementById('acard').classList.add('show');
+  /* Try to get richer AI interpretation */
+  if(S.poem&&S.word){
+    try{
+      const p=`你是唐代诗歌与当代文化的研究者。
+古诗："${S.poem.t}"（长沙窑出土·唐）
+今人心声："${S.word}"
+请用两部分回答：
+【解读】用60字以内解读这首古诗的意境与情感内涵
+【寄寓】用50字以内，说明这首诗如何回应今天这个人的心声，及其对当代的意义
+格式：{"interp":"...","modern":"..."}`;
+      const res=await apiCall(p,300);
+      const clean=res.replace(/```json?|```/g,'').trim();
+      const parsed=JSON.parse(clean.match(/\{[\s\S]*?\}/)[0]);
+      if(parsed.interp)document.getElementById('pi-interp').textContent=parsed.interp;
+      if(parsed.modern)document.getElementById('pi-modern').textContent='今日寄寓：'+parsed.modern;
+    }catch(e){/* keep data fallback */}
+  }
+}
+
+function saveArt(){
+  const certId=document.getElementById('acid').textContent;
+  const content=`【诗瓷守护者数字证书】
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+一言入瓷，千年不泯
+长沙窑"诗瓷共生"数智沉浸体验
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+今人之言：${S.word||'（未填写）'}
+情绪感知：${EMO[S.emotion]?EMO[S.emotion].label:'思念'}
+千年回声：${S.poem?S.poem.t:''}
+
+【诗意解读】
+${document.getElementById('pi-interp').textContent}
+
+【今日寄寓】
+${document.getElementById('pi-modern').textContent}
+
+器型釉色：${document.getElementById('ar-vessel').textContent}
+AI感悟：${S.insight}
+
+证书编号：${certId}
+烧制时间：${new Date().toLocaleString('zh-CN')}
+
+—— 此瓷承载今人心声，与千年前无名诗人共处一釉 ——`;
+  const blob=new Blob([content],{type:'text/plain;charset=utf-8'});
+  const url=URL.createObjectURL(blob); const a=document.createElement('a');
+  a.href=url; a.download=`诗瓷守护者_${certId}.txt`; a.click(); URL.revokeObjectURL(url);
+}
+
+/* ═══════════════ API ═══════════════ */
+async function apiCall(prompt,maxT=500){
+  const res=await fetch('/api/claude',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({prompt:prompt,max_tokens:maxT})
+  });
+  if(!res.ok)throw new Error('api'+res.status);
+  const d=await res.json();
+  return d.text||'';
+}
+
+function showLoad(msg){document.getElementById('ltxt').textContent=msg||'处理中……';document.getElementById('lov').classList.add('show');}
+function hideLoad(){document.getElementById('lov').classList.remove('show');}
+window.onerror = function(msg, src, line, col, err) {
+  console.error('JS Error:', msg, 'line:', line);
+  var d = document.createElement('div');
+  d.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#1a0c04;color:#c8a882;padding:2rem;border:1px solid #c8a882;font-family:sans-serif;text-align:center;z-index:9999;max-width:80vw';
+  d.innerHTML = '<div style="font-size:1.1rem;margin-bottom:1rem">⚠️ 加载错误</div><div style="font-size:.8rem;opacity:.7">'+msg+'<br>行：'+line+'</div><button onclick="location.reload()" style="margin-top:1rem;padding:.5rem 1.5rem;background:#c8a882;color:#0d0906;border:none;cursor:pointer">重新加载</button>';
+  document.body.appendChild(d);
+  return true;
+};
+</script>
+</body>
+</html>
